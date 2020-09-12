@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/colors/blue.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet.css" href="css/custom-style.css">
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <title>WorkCradle</title>
+  </head>
+  <body>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+    
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-migrate-3.1.0.min.html"></script>
+    <script src="js/mmenu.min.js"></script>
+    <script src="js/tippy.all.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/snackbar.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- Snackbar // documentation: https://www.polonel.com/snackbar/ -->
+    <script>
+      // Snackbar for user status switcher
+      $('#snackbar-user-status label').click(function() { 
+        Snackbar.show({
+          text: 'Your status has been changed!',
+          pos: 'bottom-center',
+          showAction: false,
+          actionText: "Dismiss",
+          duration: 3000,
+          textColor: '#fff',
+          backgroundColor: '#383838'
+        }); 
+      }); 
+      </script>
+  </body>  
+</html>

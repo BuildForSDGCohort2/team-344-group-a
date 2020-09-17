@@ -1,87 +1,17 @@
 import { Component } from 'react';
 import React from 'react';
 
+import Header from '../body-component/HomepageComps/HomeHeader';
+import Footer from '../body-component/Footer';
+import SearchBar from '../body-component/HomepageComps/SearchBar';
+import { Link } from 'react-router-dom';
+
 class Homepage extends Component {
  render () {
 	 return (
-
-			// <!-- Wrapper -->
-			<div id="wrapper" className="wrapper-with-transparent-header">
-
-			{/* <!-- Header Container
-			================================================== --> */}
-			<header id="header-container" className="fullwidth transparent-header">
-
-				{/* <!-- Header --> */}
-				<div id="header">
-					<div className="container">
-						
-						{/* <!-- Left Side Content --> */}
-						<div className="left-side">
-							
-							{/* <!-- Logo --> */}
-							<div id="logo">
-								<a href="Homepage.html"><img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt="" /></a>
-							</div>
-
-							{/* <!-- Main Navigation --> */}
-							<nav id="navigation">
-								<ul id="responsive">
-									<li><a href="#">Browse</a>
-										<ul className="dropdown-nav">
-											<li><a href="pages/jobs-grid-layout.html">Browse Jobs</a></li>
-											<li><a href="pages/browse-companies.html">Browse Companies</a></li>
-											<li><a href="pages/tasks-list-layout-2.html">Browse Tasks</a></li>
-										</ul>
-									</li>
-
-									<li><a href="#">For Employers</a>
-										<ul className="dropdown-nav">
-											<li><a href="pages/freelancers-grid-layout.html">Find a Freelancer</a></li>
-											<li><a href="pages/dashboard-post-a-job.html">Post a Job</a></li>
-											<li><a href="pages/dashboard-post-a-task.html">Post a Task</a></li>
-										</ul>
-									</li>
-									<li><a href="pages/pages-blog.html">Blog</a></li>
-									<li style={{backgroundColor: '#53ec2c', padding: '.4rem', fontSize: '16px', marginRight: 'auto'}}><a href="#how_it_works">How it works?</a></li>
-								</ul> 
-							</nav> 
-							<div className="clearfix"></div>
-							{/* <!-- Main Navigation / End --> */}
-							
-						</div>
-						{/* <!-- Left Side Content / End --> */}
-
-
-						{/* <!-- Right Side Content / End --> */}
-						<div className="right-side">
-
-							<div className="header-widget">
-								<a href="pages/pages-login.html" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></a> 
-							</div>
-
-							{/* <!-- Mobile Navigation Button --> */}
-							<span className="mmenu-trigger">
-								<button className="hamburger hamburger--collapse" type="button">
-									<span className="hamburger-box">
-										<span className="hamburger-inner"></span>
-									</span>
-								</button>
-							</span>
-
-						</div>
-						{/* <!-- Right Side Content / End --> */}
-
-					</div>
-				</div>
-				{/* <!-- Header / End --> */}
-
-			</header>
-			<div className="clearfix"></div>
-			{/* <!-- Header Container / End --> */}
-
-
-
+		 <>
+		 	<div id="wrapper" className="wrapper-with-transparent-header">
+			<Header /> 
 			{/* <!-- Intro Banner
 			================================================== --> */}
 			<div className="intro-banner dark-overlay big-padding">
@@ -104,29 +34,7 @@ class Homepage extends Component {
 					{/* <!-- Search Bar --> */}
 					<div className="row">
 						<div className="col-md-12">
-							<div className="intro-banner-search-form margin-top-95">
-
-								{/* <!-- Search Field --> */}
-								<div className="intro-search-field">
-									<label for="intro-keywords" className="field-title ripple-effect">Looking for a Company?</label>
-									<div className="input-autocomplete">
-										<div style={{display: 'inline-block'}}><i style={{display: 'inline'}} className="far fa-building"></i></div>
-										<div style={{display: 'inline-block'}}><input type="text" placeholder="Enter Company Name" /></div>
-									</div>
-								</div>
-
-								{/* <!-- Search Field --> */}
-								<div className="intro-search-field">
-									<label for ="intro-keywords" className="field-title ripple-effect">Looking for a Talent?</label>
-									<i className="fas fa-tools"></i> 
-									<input id="intro-keywords" type="text" placeholder="Skill Title or Keywords" />
-								</div>
-
-								{/* <!-- Button --> */}
-								<div className="intro-search-button">
-									<button className="button ripple-effect" onclick="window.location.href='pages/jobs-list-layout-1.html'">Search</button>
-								</div>
-							</div>
+							<SearchBar />
 						</div>
 					</div>
 				
@@ -151,89 +59,89 @@ class Homepage extends Component {
 
 						{/* <!-- Section Headline --> */}
 						<div className="col-xl-12">
-							<div className="section-headline centered margin-top-0 margin-bottom-45">
+							<div className="section-headline centered margin-top-0 margin-bottom-45" style={{borderBottom: '1px solid', margin:''}}>
 								<h3>Popular Categories</h3>
 							</div>
 						</div>
 
 						<div className="col-xl-3 col-md-6">
 							{/* <!-- Photo Box --> */}
-							<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-01.jpg">
+							<Link to="/jobs/web_software_dev" className="photo-box small" data-background-image="images/job-category-01.jpg">
 							<div className="photo-box-content">
 								<h3>Web / Software Dev</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-02.jpg">
+						<Link to="/jobs/data_science_analalytics" className="photo-box small" data-background-image="images/job-category-02.jpg">
 							<div className="photo-box-content">
 								<h3>Data Science / Analitycs</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-03.jpg">
+						<Link to="/jobs/javascript" className="photo-box small" data-background-image="images/job-category-03.jpg">
 							<div className="photo-box-content">
 								<h3>Javascript</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-04.jpg">
+						<Link to="/jobs/goland" className="photo-box small" data-background-image="images/job-category-04.jpg">
 							<div className="photo-box-content">
 								<h3>Goland</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-05.jpg">
+						<Link to="/jobs/python" className="photo-box small" data-background-image="images/job-category-05.jpg">
 							<div className="photo-box-content">
 								<h3>Python</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-06.jpg">
+						<Link to="/jobs/graphic_&_design" className="photo-box small" data-background-image="images/job-category-06.jpg">
 							<div className="photo-box-content">
 								<h3>Graphics & Design</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-07.jpg">
+						<Link to="/jobs/digital_marketing" className="photo-box small" data-background-image="images/job-category-07.jpg">
 							<div className="photo-box-content">
 								<h3>Digital Marketing</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<a href="pages/jobs-grid-layout-full-page.html" className="photo-box small" data-background-image="images/job-category-08.jpg">
+						<Link to="/jobs/education_training" className="photo-box small" data-background-image="images/job-category-08.jpg">
 							<div className="photo-box-content">
 								<h3>Education & Training</h3>
 								<span></span>
 							</div>
-						</a>
+						</Link>
 					</div>
 
 				</div>
@@ -249,10 +157,10 @@ class Homepage extends Component {
 					<div className="col-xl-12">
 						
 						{/* <!-- Section Headline --> */}
-						<div className="section-headline margin-top-0 margin-bottom-35">
+						{/* <div className="section-headline margin-top-0 margin-bottom-35">
 							<h3>Recent Projects</h3>
-							<a href="pages/jobs-list-layout-full-page-map.html" className="headline-link">Browse All Jobs</a>
-						</div>
+							<Link href="pages/jobs-list-layout-full-page-map.html" className="headline-link">Browse All Jobs</Link>
+						</div> */}
 						
 						{/* <!-- Jobs Container --> */}
 						
@@ -275,7 +183,7 @@ class Homepage extends Component {
 					<div className="row">
 						<div className="col-lg-6 col-md-8 col-sm-12">
 							<h2>Find a Talent. <br /> Get the right talent to get that job done.</h2>
-							<a href="pages/jobs-grid-layout.html" className="button button-sliding-icon ripple-effect big margin-top-20">Get Started <i className="icon-material-outline-arrow-right-alt"></i></a>
+							<Link href="/freelancers" className="button button-sliding-icon ripple-effect big margin-top-20">Get Started <i className="icon-material-outline-arrow-right-alt"></i></Link>
 						</div>
 					</div>
 
@@ -365,8 +273,8 @@ class Homepage extends Component {
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Nelson Onyenobi <img className="flag" src="images/flags/de.svg" alt="" title="Germany" data-tippy-placement="top" /></a></h4>
-											<span>iOS Expert + Node Dev</span>
+											<h4><a href="#">Christian Ndu<img className="flag" src="images/flags/de.svg" alt="" title="Germany" data-tippy-placement="top" /></a></h4>
+											<span>Front-End Developer</span>
 										</div>
 
 										{/* <!-- Rating --> */}
@@ -406,7 +314,7 @@ class Homepage extends Component {
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Princewill Chiaka <img className="flag" src="images/flags/pl.svg" alt="" title="Poland" data-tippy-placement="top"/></a></h4>
+											<h4><a href="#">Job Oaikhenah <img className="flag" src="images/flags/pl.svg" alt="" title="Poland" data-tippy-placement="top"/></a></h4>
 											<span>Front-End Developer</span>
 										</div>
 
@@ -421,7 +329,7 @@ class Homepage extends Component {
 								<div className="freelancer-details">
 									<div className="freelancer-details-list">
 										<ul>
-											<li>Location <strong><i className="icon-material-outline-location-on"></i> United States</strong></li>
+											<li>Location <strong><i className="icon-material-outline-location-on"></i>Nigeria</strong></li>
 											<li>Rate <strong>$50 / hr</strong></li>
 											<li>Job Success <strong>100%</strong></li>
 										</ul>
@@ -448,8 +356,8 @@ class Homepage extends Component {
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Cyprian Omoh <img className="flag" src="images/flags/au.svg" alt="" title="Australia" data-tippy-placement="top" /></a></h4>
-											<span>Magento Certified Developer</span>
+											<h4><a href="#">Gain John <img className="flag" src="images/flags/au.svg" alt="" title="Australia" data-tippy-placement="top" /></a></h4>
+											<span>Back-End Developer</span>
 										</div>
 
 										{/* <!-- Rating --> */}
@@ -472,90 +380,7 @@ class Homepage extends Component {
 								</div>
 							</div>
 							{/* <!-- Freelancer / End --> */}
-							
-							{/* <!--Freelancer --> */}
-							<div className="freelancer">
-
-								{/* <!-- Overview --> */}
-								<div className="freelancer-overview">
-										<div className="freelancer-overview-inner">
-										{/* <!-- Bookmark Icon --> */}
-										<span className="bookmark-icon"></span>
-										
-										{/* <!-- Avatar --> */}
-										<div className="freelancer-avatar">
-											<a href="pages/single-freelancer-profile.html"><img src="images/user-avatar-placeholder.png" alt="" /></a>
-										</div>
-
-										{/* <!-- Name --> */}
-										<div className="freelancer-name">
-											<h4><a href="#">Obinna Harry <img className="flag" src="images/flags/it.svg" alt="" title="Italy" data-tippy-placement="top" /></a></h4>
-											<span>Laravel Dev</span>
-										</div>
-
-										{/* <!-- Rating --> */}
-										<div className="freelancer-rating">
-											<div className="star-rating" data-rating="4.5"></div>
-										</div>
-									</div>
-								</div>
-								
-								{/* <!-- Details --> */}
-								<div className="freelancer-details">
-									<div className="freelancer-details-list">
-										<ul>
-											<li>Location <strong><i className="icon-material-outline-location-on"></i> South Africa</strong></li>
-											<li>Rate <strong>$80 / hr</strong></li>
-											<li>Job Success <strong>89%</strong></li>
-										</ul>
-									</div>
-									<a href="pages/single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
-								</div>
-							</div>
-							{/* <!-- Freelancer / End --> */}
-										
-							{/* <!--Freelancer --> */}
-							<div className="freelancer">
-
-								{/* <!-- Overview --> */}
-								<div className="freelancer-overview">
-										<div className="freelancer-overview-inner">
-										{/* <!-- Bookmark Icon --> */}
-										<span className="bookmark-icon"></span>
-										
-										{/* <!-- Avatar --> */}
-										<div className="freelancer-avatar">
-											<a href="single-freelancer-profile.html"><img src="images/user-avatar-placeholder.png" alt="" /></a>
-										</div>
-
-										{/* <!-- Name --> */}
-										<div className="freelancer-name">
-											<h4><a href="#">Gabriel Lagueux <img className="flag" src="images/flags/fr.svg" alt="" title="France" data-tippy-placement="top" /></a></h4>
-											<span>WordPress Expert</span>
-										</div>
-
-										{/* <!-- Rating --> */}
-										<div className="freelancer-rating">
-											<div className="star-rating" data-rating="5.0"></div>
-										</div>
-									</div>
-								</div>
-								
-								{/* <!-- Details --> */}
-								<div className="freelancer-details">
-									<div className="freelancer-details-list">
-										<ul>
-											<li>Location <strong><i className="icon-material-outline-location-on"></i> Nigeria</strong></li>
-											<li>Rate <strong>$50 / hr</strong></li>
-											<li>Job Success <strong>100%</strong></li>
-										</ul>
-									</div>
-									<a href="single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
-								</div>
-							</div>
-							{/* <!-- Freelancer / End --> */}
-
-
+					
 						</div>
 					</div>
 
@@ -572,12 +397,12 @@ class Homepage extends Component {
 
 					<div className="col-xl-12">
 						{/* <!-- Section Headline --> */}
-						<div className="section-headline centered margin-top-0 margin-bottom-5">
+						<div className="section-headline centered margin-top-0 margin-bottom-5" style={{borderBottom: '1px solid', margin:''}}>
 							<h3>How It Works?</h3>
 						</div>
 					</div>
 					
-					<div className="col-xl-4 col-md-4">
+					<div className="col-xl-4 col-md-4" style={{display:'flex', alignItems:'center'}}>
 						{/* <!-- Icon Box --> */}
 						<div className="icon-box with-line">
 							{/* <!-- Icon --> */}
@@ -588,40 +413,71 @@ class Homepage extends Component {
 								</div>
 							</div>
 							<h3>Create an Account</h3>
-							<p>Bring to the table win-win survival strategies to ensure proactive domination going forward.</p>
 						</div>
 					</div>
-
-					<div className="col-xl-4 col-md-4">
-						{/* <!-- Icon Box --> */}
-						<div className="icon-box with-line">
-							{/* <!-- Icon --> */}
-							<div className="icon-box-circle">
-								<div className="icon-box-circle-inner">
-									<i className="icon-line-awesome-legal"></i>
-									<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+					
+					<div className="col-xl-8 col-md-8">
+						<h3 style={{textAlign:'center', marginTop: '30px'}}>As a Freelancer</h3>
+						<div className="col-xl-12 col-md-12 row">
+							<div className="col-xl-6 col-md-6">
+								{/* <!-- Icon Box --> */}
+								<div className="icon-box with-line">
+									{/* <!-- Icon --> */}
+									<div className="icon-box-circle">
+										<div className="icon-box-circle-inner">
+											<i className="icon-line-awesome-legal"></i>
+											<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+										</div>
+									</div>
+									<h3>Find a Task</h3>
 								</div>
 							</div>
-							<h3>Post a Task</h3>
-							<p>Efficiently unleash cross-media information without. Quickly maximize return on investment.</p>
-						</div>
-					</div>
 
-					<div className="col-xl-4 col-md-4">
-						{/* <!-- Icon Box --> */}
-						<div className="icon-box">
-							{/* <!-- Icon --> */}
-							<div className="icon-box-circle">
-								<div className="icon-box-circle-inner">
-									<i className=" icon-line-awesome-trophy"></i>
-									<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+							<div className="col-xl-6 col-md-6">
+								{/* <!-- Icon Box --> */}
+								<div className="icon-box">
+									{/* <!-- Icon --> */}
+									<div className="icon-box-circle">
+										<div className="icon-box-circle-inner">
+											<i className=" icon-line-awesome-trophy"></i>
+											<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+										</div>
+									</div>
+									<h3>Get Awarded</h3>
 								</div>
 							</div>
-							<h3>Choose an Expert</h3>
-							<p>Nanotechnology immersion along the information highway will close the loop on focusing solely.</p>
 						</div>
-					</div>
+						<div className="col-xl-12 col-md-12 row">
+							<div className="col-xl-6 col-md-6">
+								{/* <!-- Icon Box --> */}
+								<div className="icon-box with-line">
+									{/* <!-- Icon --> */}
+									<div className="icon-box-circle">
+										<div className="icon-box-circle-inner">
+											<i className="icon-line-awesome-legal"></i>
+											<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+										</div>
+									</div>
+									<h3>Post a Task</h3>
+								</div>
+							</div>
 
+							<div className="col-xl-6 col-md-6">
+								{/* <!-- Icon Box --> */}
+								<div className="icon-box">
+									{/* <!-- Icon --> */}
+									<div className="icon-box-circle">
+										<div className="icon-box-circle-inner">
+											<i className=" icon-line-awesome-trophy"></i>
+											<div className="icon-box-check"><i className="icon-material-outline-check"></i></div>
+										</div>
+									</div>
+									<h3>Choose an Expert</h3>
+								</div>
+							</div>
+						</div>
+						<h3 style={{textAlign:'center', marginTop: '30px'}}>As an Employer</h3>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -672,143 +528,82 @@ class Homepage extends Component {
 				</div>
 			</div>
 		</div>
-
-		{/* <!-- Footer */}
-		{/* ================================================== --> */}
-		<div id="footer">
-			
-			{/* <!-- Footer Top Section --> */}
-			<div className="footer-top-section">
-				<div className="container">
-					<div className="row">
-						<div className="col-xl-12">
-
-							{/* <!-- Footer Rows Container --> */}
-							<div className="footer-rows-container">
-								
-								{/* <!-- Left Side --> */}
-								<div className="footer-rows-left">
-									<div className="footer-row">
-										<div className="footer-row-inner footer-logo">
-											<img src="images/logo2.png" alt="" />
-										</div>
-									</div>
-								</div>
-								
-								{/* <!-- Right Side --> */}
-								<div className="footer-rows-right">
-
-									{/* <!-- Social Icons --> */}
-									
-									
-									{/* <!-- Language Switcher --> */}
-									<div className="footer-row">
-										<div className="footer-row-inner">
-											<select className="selectpicker language-switcher" data-selected-text-format="count" data-size="5">
-												<option selected>English</option>
-											</select>
-										</div>
-									</div>
-								</div>
-
-							</div>
-							{/* <!-- Footer Rows Container / End --> */}
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <!-- Footer Top Section / End --> */}
-
-			{/* <!-- Footer Middle Section --> */}
-			<div className="footer-middle-section">
-				<div className="container">
-					<div className="row">
-
-						{/* <!-- Links --> */}
-						<div className="col-xl-2 col-lg-2 col-md-3">
-							<div className="footer-links">
-								<h3>For Candidates</h3>
-								<ul>
-									<li><a href="#"><span>Browse Jobs</span></a></li>
-									<li><a href="#"><span>Add Resume</span></a></li>
-									<li><a href="#"><span>Job Alerts</span></a></li>
-									<li><a href="#"><span>My Bookmarks</span></a></li>
-								</ul>
-							</div>
-						</div>
-
-						{/* <!-- Links --> */}
-						<div className="col-xl-2 col-lg-2 col-md-3">
-							<div className="footer-links">
-								<h3>For Employers</h3>
-								<ul>
-									<li><a href="#"><span>Browse Candidates</span></a></li>
-									<li><a href="#"><span>Post a Job</span></a></li>
-									<li><a href="#"><span>Post a Task</span></a></li>g
-								</ul>
-							</div>
-						</div>
-
-						{/* <!-- Links --> */}
-						<div className="col-xl-2 col-lg-2 col-md-3">
-							<div className="footer-links">
-								<h3>Helpful Links</h3>
-								<ul>
-									<li><a href="#"><span>Contact</span></a></li>
-									<li><a href="#"><span>Privacy Policy</span></a></li>
-									<li><a href="#"><span>Terms of Use</span></a></li>
-								</ul>
-							</div>
-						</div>
-
-						{/* <!-- Links --> */}
-						<div className="col-xl-2 col-lg-2 col-md-3">
-							<div className="footer-links">
-								<h3>Account</h3>
-								<ul>
-									<li><a href="#"><span>Log In</span></a></li>
-									<li><a href="#"><span>My Account</span></a></li>
-								</ul>
-							</div>
-						</div>
-
-						{/* <!-- Newsletter --> */}
-						<div className="col-xl-4 col-lg-4 col-md-12">
-							<h3><i className="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
-							<p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
-							<form action="#" method="get" className="newsletter">
-								<input type="text" name="fname" placeholder="Enter your email address" />
-								<button type="submit"><i className="icon-feather-arrow-right"></i></button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <!-- Footer Middle Section / End --> */}
-			
-			{/* <!-- Footer Copyrights --> */}
-			<div className="footer-bottom-section">
-				<div className="container">
-					<div className="row">
-						<div className="col-xl-12">
-							© 2020 <strong>WorkCradle</strong>. All Rights Reserved.
-						</div>
-					</div>
-				</div>
-			</div>
-			{/* <!-- Footer Copyrights / End --> */}
-
+		<Footer />
 		</div>
-		{/* <!-- Footer / End --> */}
-
-		</div>
-		// {/* <!-- Wrapper / End --> */}
-
+		</>
 		)
  	}
 }
 
 export default Homepage;
+
+
+
+{/* <div className="footer-middle-section">
+				<div className="container">
+					<div className="row"> */}
+
+						{/* <!-- Links --> */}
+						// <div className="col-xl-2 col-lg-2 col-md-3">
+						// 	<div className="footer-links">
+						// 		<h3>For Candidates</h3>
+						// 		<ul>
+						// 			<li><a href="#"><span>Browse Jobs</span></a></li>
+						// 			<li><a href="#"><span>Add Resume</span></a></li>
+						// 			<li><a href="#"><span>Job Alerts</span></a></li>
+						// 			<li><a href="#"><span>My Bookmarks</span></a></li>
+						// 		</ul>
+						// 	</div>
+						// </div>
+
+						{/* <!-- Links --> */}
+						// <div className="col-xl-2 col-lg-2 col-md-3">
+						// 	<div className="footer-links">
+						// 		<h3>For Employers</h3>
+						// 		<ul>
+						// 			<li><a href="#"><span>Browse Candidates</span></a></li>
+						// 			<li><a href="#"><span>Post a Job</span></a></li>
+						// 			<li><a href="#"><span>Post a Task</span></a></li>
+						// 		</ul>
+						// 	</div>
+						// </div>
+
+						{/* <!-- Links --> */}
+						// <div className="col-xl-2 col-lg-2 col-md-3">
+						// 	<div className="footer-links">
+						// 		<h3>Helpful Links</h3>
+						// 		<ul>
+						// 			<li><a href="#"><span>Contact</span></a></li>
+						// 			<li><a href="#"><span>Privacy Policy</span></a></li>
+						// 			<li><a href="#"><span>Terms of Use</span></a></li>
+						// 		</ul>
+						// 	</div>
+						// </div>
+
+						{/* <!-- Links --> */}
+						// <div className="col-xl-2 col-lg-2 col-md-3">
+						// 	<div className="footer-links">
+						// 		<h3>Account</h3>
+						// 		<ul>
+						// 			<li><a href="#"><span>Log In</span></a></li>
+						// 			<li><a href="#"><span>My Account</span></a></li>
+						// 		</ul>
+						// 	</div>
+						// </div>
+
+						{/* <!-- Newsletter --> */}
+			// 			<div className="col-xl-4 col-lg-4 col-md-12">
+			// 				<h3><i className="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
+			// 				<p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
+			// 				<form action="#" method="get" className="newsletter">
+			// 					<input type="text" name="fname" placeholder="Enter your email address" />
+			// 					<button type="submit"><i className="icon-feather-arrow-right"></i></button>
+			// 				</form>
+			// 			</div>
+			// 		</div>
+			// 	</div>
+			// </div>
+
 
 
 

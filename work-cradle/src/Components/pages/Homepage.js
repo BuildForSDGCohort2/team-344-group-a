@@ -96,9 +96,9 @@ class Homepage extends Component {
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/goland" className="photo-box small" data-background-image="images/job-category-04.jpg">
+						<Link to="/jobs/golang" className="photo-box small" data-background-image="images/job-category-04.jpg">
 							<div className="photo-box-content">
-								<h3>Goland</h3>
+								<h3>Golang</h3>
 								<span></span>
 							</div>
 						</Link>
@@ -116,7 +116,7 @@ class Homepage extends Component {
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/graphic_&_design" className="photo-box small" data-background-image="images/job-category-06.jpg">
+						<Link to="/jobs/graphics_&_design" className="photo-box small" data-background-image="images/job-category-06.jpg">
 							<div className="photo-box-content">
 								<h3>Graphics & Design</h3>
 								<span></span>

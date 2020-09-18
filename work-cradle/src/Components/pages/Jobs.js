@@ -6,8 +6,6 @@ class Jobs extends Component {
 		return (
 			<>
 
-				{/* <!-- Wrapper --> */}
-
 				{/* <!-- Spacer --> */}
 				<div className="margin-top-90"></div>
 				{/* <!-- Spacer / End--> */}
@@ -417,9 +415,6 @@ class Jobs extends Component {
 						</div>
 					</div>
 				</div>
-
-				
-				{/* <!-- Wrapper / End --> */}
 
 			</>
 		)

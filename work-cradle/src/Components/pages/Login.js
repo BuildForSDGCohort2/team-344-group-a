@@ -1,20 +1,66 @@
 import React from 'react';
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import PostData from '../Services /PostData';
 
 class Login extends Component {
+  constructor(){
+    super();
+    this.state= {
+      emailAddress: '',
+      password: '',
+      invalidLoginDetails: false,
+      redirect: false
+    }
+
+    this.login = this.login.bind(this);
+    this.grabInputOnChange = this.grabInputOnChange.bind(this);
+  }
+
+  login(e) {
+    e.preventDefault();
+    let loginDetails = {
+      emailAddress: this.state.emailAddress,
+      password: this.state.password
+    };
+    console.log(loginDetails);
+    if((loginDetails.emailAddress !== '') && (loginDetails.passsword !== '')) {
+      PostData('login', loginDetails).then((result) =>{
+        let responseJSON = result;
+        if(responseJSON.userData) {
+          let storage = sessionStorage;
+          storage.setItem('userData', responseJSON);
+          this.setState({redirect:true})
+        }
+      }) 
+      .catch(this.setState({invalidLoginDetails: true}))
+    }
+      else( 
+        this.setState({
+          invalidLoginDetails: true
+        })
+      )
+  }
+
+  grabInputOnChange(e) {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   render() {
+    if(this.state.redirect){
+      return (<Redirect to={'/'}/>)
+    }
     return(
       <>
-        <div id="titlebar" class="gradient">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
+        <div id="titlebar" className="gradient">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
 
                 <h2>Log In</h2>
 
                 {/* <!-- Breadcrumbs --> */}
-                <nav id="breadcrumbs" class="dark">
+                <nav id="breadcrumbs" className="dark">
                   <ul>
                     <li><Link to="/">Home</Link></li>
                     <li>Log In</li>
@@ -26,41 +72,37 @@ class Login extends Component {
           </div>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-5 offset-xl-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-5 offset-xl-3">
 
 
-              <div class="login-register-page">
+              <div className="login-register-page">
                 {/* <!-- Welcome Text --> */}
-                <div class="welcome-text">
+                <div className="welcome-text">
                   <h3>We're glad to see you again!</h3>
                   <span>Don't have an account? <Link to="/signup">Sign Up!</Link></span>
                 </div>
-                  
+
+                {this.state.invalidLoginDetails ?  <p style={{color: 'red', textAlign: 'center'}}>Invalid email or password</p> : '' }
+
                 {/* <!-- Form --> */}
                 <form method="post" id="login-form">
-                  <div class="input-with-icon-left">
-                    <i class="icon-material-baseline-mail-outline"></i>
-                    <input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="Email Address" required/> 
+                  <div className="input-with-icon-left">
+                    <i className="icon-material-baseline-mail-outline"></i>
+                    <input type="text" className="input-text with-border" name="emailAddress" id="emailaddress" placeholder="Email Address" onChange={this.grabInputOnChange} required/> 
                   </div>
 
-                  <div class="input-with-icon-left">
-                    <i class="icon-material-outline-lock"></i>
-                    <input type="password" class="input-text with-border" name="password" id="password" placeholder="Password" required/>
+                  <div className="input-with-icon-left">
+                    <i className="icon-material-outline-lock"></i>
+                    <input type="password" className="input-text with-border" name="password" id="password" placeholder="Password" onChange={this.grabInputOnChange} required/>
                   </div>
                  
                 </form>
                 
                 {/* <!-- Button --> */}
-                <button class="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
+                <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.login}>Log In <i className="icon-material-outline-arrow-right-alt"></i></button>
                 
-                {/* <!-- Social Login --> */}
-                {/* <div class="social-login-separator"><span>or</span></div>
-                <div class="social-login-buttons">
-                  <button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Log In via Facebook</button>
-                  <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
-                </div> */}
               </div>
 
             </div>
@@ -68,7 +110,7 @@ class Login extends Component {
         </div>
 
         {/* <!-- Spacer --> */}
-        <div class="margin-top-70"></div>
+        <div className="margin-top-70"></div>
         {/* <!-- Spacer / End--> */}
 
       </>

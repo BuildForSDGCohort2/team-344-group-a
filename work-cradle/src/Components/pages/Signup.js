@@ -1,27 +1,34 @@
 import React from 'react';
 import { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import PostData from '../Services /PostData';
 
 class SignUp extends Component {
 
-  constructor(props) {
-    super(props); 
+  constructor() {
+    super(); 
     
     this.state = {
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       email: '',
       password: '',
       confirmPassword: '',
       incorrectPass: false,
       passConfirmed: true,
+      freelancer: false,
+      employer: false,
+      registering: false,
+      redirect: false,
+      token: ''
     } 
 
     this.NameHandler = this.NameHandler.bind(this);
-    this.repeatPasswordHandler = this.repeatPasswordHandler.bind(this);
     this.emailHandler = this.emailHandler.bind(this);
     this.passwordHandler = this.passwordHandler.bind(this);
-    this.register = this.register.bind(this);
+    this.repeatPasswordHandler = this.repeatPasswordHandler.bind(this);
+    this.registre = this.register.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
 
   NameHandler(e) {
@@ -55,43 +62,38 @@ class SignUp extends Component {
     })  
   }
 
-  passAlert = () => <p style={{color:'red', fontFamily:'sans-serif', paddingLeft: 20}}>Passwords don't match!</p>
+  register() {
+    let newUser = {
+      name: `${this.state.first_name} ${this.state.last_name}`,
+      password: this.state.password,
+      email: this.state.email
+    };  
+    console.log(newUser);
+    PostData('register', newUser).then((result) =>{
+      let responseJSON = result;
+      if(responseJSON.userData) {
+        sessionStorage.setItem('userData', responseJSON);
+        this.setState({
+          token: responseJSON.userData.access_token, 
+          redirect: true
+        }); 
+      }
+    }) 
+  }  
 
-  register() { 
-    return (
-      !(this.state.confirmPassword === this.state.password) ?
-        this.setState({passConfirmed:false}) 
-        : () => {
-          const userDetails = {
-            firsName: this.state.firstName,
-            lastName: this.state.lastName,
-            email: this.state.email,
-            password: this.state.password
-          } 
-          fetch('url', {
-            method: 'post',
-            body: JSON.stringify(
-              userDetails
-            ), 
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            } 
-          }) 
-          .then(response => {
-            response.json().then(resp => {
-              console.log(resp)
-            })
-          })
-        } 
-
-    )
-
+  submitForm(e) {
+    if (this.state.password === this.state.confirmPassword) {
+      this.setState({passConfirmed: true, registering: true});
+      e.preventDefault();
+      this.register();
+    } else {this.setState({passConfirmed: false})}
   }
 
   render() {
     const { incorrectPass, passConfirmed } = this.state;
-
+    if(this.state.token){
+      return (<Redirect to={'/'}/>)
+    } 
     return(
       <>
       <div id="titlebar" className="gradient">
@@ -118,35 +120,23 @@ class SignUp extends Component {
         <div className="row">
           <div className="col-xl-5 offset-xl-3">
 
-            <div className="login-register-page">
+            <div className="login-submitForm-page">
               {/* <!-- Welcome Text --> */}
               <div className="welcome-text">
                 <h3 style={{fontSize: 26}}>Let's create your account!</h3>
                 <span>Already have an account? <Link to="/login">Log In!</Link></span>
               </div>
 
-              {/* <!-- Account Type --> */}
-              <div className="account-type">
-                <div>
-                  <input type="radio" name="account-type-radio" id="freelancer-radio" className="account-type-radio" checked/>
-                  <label for="freelancer-radio" className="ripple-effect-dark"><i className="icon-material-outline-account-circle"></i> Freelancer</label>
-                </div>
-
-                <div>
-                  <input type="radio" name="account-type-radio" id="employer-radio" className="account-type-radio"/>
-                  <label for="employer-radio" className="ripple-effect-dark"><i className="icon-material-outline-business-center"></i> Employer</label>
-                </div>
-              </div>
-                
               {/* <!-- Form --> */}
-              <form method="post" id="register-account-form">
+              <form method="post" id="submitForm-account-form">
+                
                 <div className="input-with-icon-left">
                   {/* <i className="icon-material-baseline-mail-outline"></i> */}
                   <input 
                   type="text" 
                   className="input-text with-border" 
-                  name="firstName" 
-                  id="fist-name" 
+                  name="first_name" 
+                  id="first_name" 
                   placeholder="First Name"  
                   onChange={this.NameHandler}
                   required/>
@@ -156,9 +146,9 @@ class SignUp extends Component {
                   <input 
                   type="text" 
                   className="input-text with-border" 
-                  name="lastName" 
-                  id="last-name" 
-                  placeholder="last Name"  
+                  name="last_name" 
+                  id="last_name" 
+                  placeholder="Last Name"  
                   onChange={this.NameHandler}
                   required/>
                 </div>
@@ -167,8 +157,8 @@ class SignUp extends Component {
                   <input 
                   type="email" 
                   className="input-text with-border" 
-                  name="email-register" 
-                  id="email-register" 
+                  name="email-submitForm" 
+                  id="email-submitForm" 
                   placeholder="Email Address"  
                   onChange={this.emailHandler}
                   required/>
@@ -176,29 +166,30 @@ class SignUp extends Component {
 
                 <div className="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
                   <i className="icon-material-outline-lock"></i>
-                  <input type="password" className="input-text with-border" name="password-register" id="password-register" placeholder="Password" required onChange={this.passwordHandler}
+                  <input type="password" 
+                  className="input-text with-border" name="password-submitForm" 
+                  id="password-submitForm" 
+                  placeholder="Password" 
+                  onChange={this.passwordHandler}
                   style = {incorrectPass ? {border: '1px solid red'} : null}
-                  /> 
+                  required/> 
                 </div>
 
                 <div className="input-with-icon-left">
                   <i className="icon-material-outline-lock"></i>
-                  <input type="password" className="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password" required onChange={this.repeatPasswordHandler}
-                  /> 
-                  { !passConfirmed ? this.passAlert() : '' }
+                  <input type="password" 
+                  className="input-text with-border" name="password-repeat-submitForm" id="password-repeat-submitForm" 
+                  placeholder="Repeat Password"  
+                  onChange={this.repeatPasswordHandler}
+                  required/> 
+                  { passConfirmed ? '' : <p style={{color:'red', fontFamily:'sans-serif', textAlign: 'center'}}>Passwords don't match!</p> } 
                 </div>
                 
               </form>
               
               {/* <!-- Button --> */}
-              <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.register}>Register <i className="icon-material-outline-arrow-right-alt"></i></button>
+              <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.submitForm}>{this.state.registering ? 'Registering...' : 'Register'}<i className="icon-material-outline-arrow-right-alt"></i></button>
               
-              {/* <!-- Social Login --> */}
-              {/* <div className="social-login-separator"><span>or</span></div>
-              <div className="social-login-buttons">
-                <button className="facebook-login ripple-effect"><i className="icon-brand-facebook-f"></i> Register via Facebook</button>
-                <button className="google-login ripple-effect"><i className="icon-brand-google-plus-g"></i> Register via Google+</button>
-              </div> */}
             </div>
 
           </div>

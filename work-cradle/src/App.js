@@ -10,7 +10,8 @@ import Base from './Components/pages/Base';
 import Homepage from './Components/pages/Homepage';
 import Companies from './Components/pages/Companies';
 import Jobs from './Components/pages/Jobs';
-
+import Login from './Components/pages/Login';
+import SignUp from './Components/pages/Signup';
 
 class App extends React.Component{
   render () {
@@ -23,6 +24,8 @@ class App extends React.Component{
               <PageHeader/>
               <Route path='/jobs' component={Jobs}/>
               <Route path='/companies' component={Companies}/>
+              <Route path='/login' component={Login}/>
+              <Route path='/signup' component={SignUp}/> 
               <Footer />
             </div>
           </Switch>

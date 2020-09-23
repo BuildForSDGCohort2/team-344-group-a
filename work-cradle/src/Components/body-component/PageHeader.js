@@ -6,14 +6,14 @@ class PageHeader extends Component {
   render() {
     return(
       <>
-        <header id="header-container" class="fullwidth">
+        <header id="header-container" className="fullwidth">
 
           {/* <!-- Header --> */}
           <div id="header">
-            <div class="container">
+            <div className="container">
               
               {/* <!-- Left Side Content --> */}
-              <div class="left-side">
+              <div className="left-side">
                 
                 {/* <!-- Logo --> */}
                 <div id="logo">
@@ -38,7 +38,7 @@ class PageHeader extends Component {
                   </li>
                   </ul>
                 </nav>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
                 {/* <!-- Main Navigation / End --> */}
                 
               </div>
@@ -69,7 +69,7 @@ class PageHeader extends Component {
           {/* <!-- Header / End --> */}
 
         </header>
-        <div class="clearfix"></div>
+        <div className="clearfix"></div>
         {/* <!-- Header Container / End --> */}
       </>
     )

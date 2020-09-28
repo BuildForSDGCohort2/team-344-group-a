@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import PostData from '../Services /PostData';
+import Footer from '../body-component/Footer'
 
 class Login extends Component {
   constructor(){
@@ -113,6 +114,7 @@ class Login extends Component {
         <div className="margin-top-70"></div>
         {/* <!-- Spacer / End--> */}
 
+        <Footer />
       </>
     )
   }

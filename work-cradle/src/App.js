@@ -20,8 +20,8 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' component={Homepage}/>
             <div id="wrapper">
-              <PageHeader/>
-              <Route path='/jobs' component={Dashboard}/>
+              <PageHeader/> 
+              <Route path='/jobs' component={Jobs}/>
               <Route path='/companies' component={Companies}/>
               <Route path='/login' component={Login}/>
               <Route path='/signup' component={SignUp}/> 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
 import PostData from '../Services /PostData';
 import Footer from '../body-component/Footer';
 
@@ -28,7 +28,7 @@ class SignUp extends Component {
     this.emailHandler = this.emailHandler.bind(this);
     this.passwordHandler = this.passwordHandler.bind(this);
     this.repeatPasswordHandler = this.repeatPasswordHandler.bind(this);
-    this.registre = this.register.bind(this);
+    this.register = this.register.bind(this);
     this.submitForm = this.submitForm.bind(this);
   }
 
@@ -93,7 +93,7 @@ class SignUp extends Component {
   render() {
     const { incorrectPass, passConfirmed } = this.state;
     if(this.state.token){
-      return (<Redirect to={'/'}/>)
+      return (<Redirect to={'/user/dashhooard'}/>)
     } 
     return(
       <>

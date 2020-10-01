@@ -1,8 +1,10 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UserNotif from './userNotif';
 
 class Header extends Component {
+
   render() {
     return(
       <>
@@ -32,7 +34,7 @@ class Header extends Component {
 
                   <li><a href="#">For Employers</a>
                     <ul className="dropdown-nav">
-                      <li><Link to="/frelancer">Find a Freelancer</Link></li>
+                      <li><Link to="/freelancers">Find a Freelancer</Link></li>
                       <li><Link to="/jobs">Post a Job</Link></li>
                     </ul>
                   </li>
@@ -48,11 +50,12 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-
-              <div className="header-widget">
-                <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
-              </div>
-
+              { !this.props.loggedIn || !this.props.registered ?
+                <div className="header-widget">
+                  <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
+                </div> 
+                : <UserNotif />
+              }
               {/* <!-- Mobile Navigation Button --> */}
               <span className="mmenu-trigger">
                 <button className="hamburger hamburger--collapse" type="button">

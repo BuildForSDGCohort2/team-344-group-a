@@ -7,11 +7,23 @@ import SearchBar from '../body-component/HomepageComps/SearchBar';
 import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
- render () {
+	constructor(props) {
+		super(props);
+		this.state = {
+			token: '',
+		} 
+	}
+
+	componentDidMount() {
+		console.log('userData', this.props.location.state);
+		this.setState({...this.props.location.state});
+	}
+
+	render () {
 	 return (
 		 <>
 		 	<div id="wrapper" className="wrapper-with-transparent-header">
-			<Header /> 
+			<Header loginToken={this.state.token}/> 
 			{/* <!-- Intro Banner
 			================================================== --> */}
 			<div className="intro-banner dark-overlay big-padding">

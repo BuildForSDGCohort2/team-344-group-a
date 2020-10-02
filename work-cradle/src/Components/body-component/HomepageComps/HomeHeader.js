@@ -4,7 +4,15 @@ import { Link } from 'react-router-dom';
 import UserNotif from './userNotif';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      loginToken : this.props.loginToken,
+    }
+  }
+
+  
   render() {
     return(
       <>
@@ -50,11 +58,11 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-              { !this.props.loggedIn || !this.props.registered ?
-                <div className="header-widget">
-                  <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
-                </div> 
-                : <UserNotif />
+              { this.state.loginToken ?
+                 <UserNotif />
+                : <div className="header-widget">
+                    <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
+                  </div>
               }
               {/* <!-- Mobile Navigation Button --> */}
               <span className="mmenu-trigger">

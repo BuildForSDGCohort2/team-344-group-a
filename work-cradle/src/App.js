@@ -26,7 +26,7 @@ class App extends React.Component{
               <Route path='/companies' component={Companies}/>
               <Route path='/freelancers' component={Freelancers}/>
               <Route path='/login' component={Login}/>
-              <Route path='/signup' component={SignUp}/> 
+              <Route path='/signup' component={SignUp}/>  
               <Route path='/user/dashboard' component={Dashboard}/>
             </div>
           </Switch>

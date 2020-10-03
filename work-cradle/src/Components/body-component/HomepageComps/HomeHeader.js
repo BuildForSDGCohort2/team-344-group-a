@@ -8,11 +8,16 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      loginToken : this.props.loginToken,
+      loginToken : ''
     }
   }
 
-  
+  componentDidMount() {
+    setTimeout( ()=>{
+      this.setState({loginToken : this.props.loginToken});
+      console.log(this.state) }, 1000) 
+  }
+
   render() {
     return(
       <>

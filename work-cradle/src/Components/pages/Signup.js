@@ -20,7 +20,6 @@ class SignUp extends Component {
       freelancer: false,
       employer: false,
       registering: false,
-      redirect: false,
       token: '',
       registered:  false
     } 
@@ -71,13 +70,12 @@ class SignUp extends Component {
       email: this.state.email
     };  
     console.log(newUser);
-    PostData('register', newUser).then((result) =>{
+    PostData('register', newUser).then(result =>{
       let responseJSON = result;
-      if(responseJSON.userData) {
-        sessionStorage.setItem('userData', responseJSON);
+      if(responseJSON.access_token) {
+        sessionStorage.setItem('userData', responseJSON.access_token);
         this.setState({
-          token: responseJSON.userData.access_token, 
-          redirect: true,
+          token: responseJSON.access_token,
           resigistered : true
         }); 
       }
@@ -93,11 +91,15 @@ class SignUp extends Component {
   }
 
   render() {
-    const { incorrectPass, passConfirmed, redirect, token, registered } = this.state;
-    if(redirect && registered ) {
-      return <Redirect to={{
+    const { incorrectPass, passConfirmed, token, registered } = this.state;
+    if(registered) {
+      return <Redirect 
+      to={{
         pathname: '/',
-        state: {registered : this.state.registered }
+        state: {
+          registered : registered, 
+          token: token
+        } 
       }}/> 
     }
     else { 

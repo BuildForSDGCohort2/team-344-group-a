@@ -23,7 +23,7 @@ class Homepage extends Component {
 	 return (
 		 <>
 		 	<div id="wrapper" className="wrapper-with-transparent-header">
-			<Header loginToken={this.state.token}/> 
+			<Header token={this.state.token}/> 
 			{/* <!-- Intro Banner
 			================================================== --> */}
 			<div className="intro-banner dark-overlay big-padding">

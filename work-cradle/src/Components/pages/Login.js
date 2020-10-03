@@ -29,10 +29,11 @@ class Login extends Component {
     if((loginDetails.emailAddress !== '') && (loginDetails.passsword !== '')) {
       PostData('login', loginDetails).then(result =>{
         let responseJSON = result;
-        console.log(responseJSON);
         if(responseJSON.access_token) {
           sessionStorage.setItem('userData', responseJSON.access_token);
-          this.setState({loggedIn:true, userToken: responseJSON.access_token})
+          this.setState({
+            loggedIn:true, userToken: responseJSON.access_token
+          })
         }
       }) 
     }
@@ -52,7 +53,10 @@ class Login extends Component {
       return (<Redirect 
             to={{
             pathname: '/',
-            state: { token: this.state.userToken, loggedIn: true }  
+            state: { 
+              token: this.state.userToken, 
+              loggedIn: true 
+            }  
           }}
         />
       ) 

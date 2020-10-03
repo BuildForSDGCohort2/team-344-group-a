@@ -8,13 +8,13 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      loginToken : ''
+      token : ''
     }
   }
 
   componentDidMount() {
     setTimeout( ()=>{
-      this.setState({loginToken : this.props.loginToken});
+      this.setState({token : this.props.token});
       console.log(this.state) }, 1000) 
   }
 
@@ -63,7 +63,7 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-              { this.state.loginToken ?
+              { this.state.token ?
                  <UserNotif />
                 : <div className="header-widget">
                     <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 

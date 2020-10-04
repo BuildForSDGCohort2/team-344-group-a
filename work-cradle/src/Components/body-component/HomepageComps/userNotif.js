@@ -9,7 +9,7 @@ const UserNotif = () => {
         <div className="header-notifications">
           {/* <!-- Trigger --> */}
           <div className="header-notifications-trigger">
-            <a href={"javascript:;"}><i className="icon-feather-bell"></i><span>1</span></a>
+            <a href={"/#"}><i className="icon-feather-bell"></i><span>1</span></a>
           </div>
 
           {/* <!-- Dropdown --> */}

@@ -10,8 +10,8 @@ class MyBids extends Component {
           {/* <!-- Breadcrumbs --> */}
           <nav id="breadcrumbs" class="dark">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Dashboard</a></li>
+              <li><a href={"/#"}>Home</a></li>
+              <li><a href={"/#"}>Dashboard</a></li>
               <li>My Active Bids</li>
             </ul>
           </nav>
@@ -40,7 +40,7 @@ class MyBids extends Component {
 
                         {/* <!-- Details --> */}
                         <div class="job-listing-description">
-                          <h3 class="job-listing-title"><a href="#">WordPress Guru Needed</a></h3>
+                          <h3 class="job-listing-title"><a href={"/#"}>WordPress Guru Needed</a></h3>
                         </div>
                       </div>
                     </div>
@@ -53,8 +53,8 @@ class MyBids extends Component {
 
                     {/* <!-- Buttons --> */}
                     <div class="buttons-to-right always-visible">
-                      <a href="#small-dialog" class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
-                      <a href="#" class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+                      <a href={"/#small-dialog"} class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
+                      <a href={"/#"} class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
                     </div>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ class MyBids extends Component {
 
                         {/* <!-- Details --> */}
                         <div class="job-listing-description">
-                          <h3 class="job-listing-title"><a href="#">Build me a website in Angular JS</a></h3>
+                          <h3 class="job-listing-title"><a href={"/#"}>Build me a website in Angular JS</a></h3>
                         </div>
                       </div>
                     </div>
@@ -79,8 +79,8 @@ class MyBids extends Component {
 
                     {/* <!-- Buttons --> */}
                     <div class="buttons-to-right always-visible">
-                      <a href="#small-dialog" class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
-                      <a href="#" class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+                      <a href={"/#small-dialog"} class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
+                      <a href={"/#"} class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
                     </div>
                   </li>
                   <li>
@@ -92,7 +92,7 @@ class MyBids extends Component {
 
                         {/* <!-- Details --> */}
                         <div class="job-listing-description">
-                          <h3 class="job-listing-title"><a href="#">Android and iOS React Appe</a></h3>
+                          <h3 class="job-listing-title"><a href={"/#"}>Android and iOS React Appe</a></h3>
                         </div>
                       </div>
                     </div>
@@ -105,8 +105,8 @@ class MyBids extends Component {
 
                     {/* <!-- Buttons --> */}
                     <div class="buttons-to-right always-visible">
-                      <a href="#small-dialog" class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
-                      <a href="#" class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+                      <a href={"/#small-dialog"} class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
+                      <a href={"/#"} class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
                     </div>
                   </li>
                   <li>
@@ -118,7 +118,7 @@ class MyBids extends Component {
 
                         {/* <!-- Details --> */}
                         <div class="job-listing-description">
-                          <h3 class="job-listing-title"><a href="#">Write Simple Python Script</a></h3>
+                          <h3 class="job-listing-title"><a href={"/#"}>Write Simple Python Script</a></h3>
                         </div>
                       </div>
                     </div>
@@ -131,8 +131,8 @@ class MyBids extends Component {
 
                     {/* <!-- Buttons --> */}
                     <div class="buttons-to-right always-visible">
-                      <a href="#small-dialog" class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
-                      <a href="#" class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
+                      <a href={"/#small-dialog"} class="popup-with-zoom-anim button dark ripple-effect ico" title="Edit Bid" data-tippy-placement="top"><i class="icon-feather-edit"></i></a>
+                      <a href={"/#"} class="button red ripple-effect ico" title="Cancel Bid" data-tippy-placement="top"><i class="icon-feather-trash-2"></i></a>
                     </div>
                   </li>
 

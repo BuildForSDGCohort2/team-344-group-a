@@ -10,8 +10,8 @@ class Settings extends Component {
 				{/* <!-- Breadcrumbs --> */}
 				<nav id="breadcrumbs" class="dark">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Dashboard</a></li>
+						<li><a href={"/#"}>Home</a></li>
+						<li><a href={"/#"}>Dashboard</a></li>
 						<li>Settings</li>
 					</ul>
 				</nav>
@@ -333,7 +333,7 @@ class Settings extends Component {
 				
 				{/* <!-- Button --> */}
 				<div class="col-xl-12">
-					<a href="#" class="button ripple-effect big margin-top-30">Save Changes</a>
+					<a href={"/#"} class="button ripple-effect big margin-top-30">Save Changes</a>
 				</div>
 
 			</div>

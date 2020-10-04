@@ -171,7 +171,7 @@ class Homepage extends Component {
 						{/* <!-- Section Headline --> */}
 						{/* <div className="section-headline margin-top-0 margin-bottom-35">
 							<h3>Recent Projects</h3>
-							<Link href="pages/jobs-list-layout-full-page-map.html" className="headline-link">Browse All Jobs</Link>
+							<Link href={"pages/jobs-list-layout-full-page-map.html" className="headline-link">Browse All Jobs</Link>
 						</div> */}
 						
 						{/* <!-- Jobs Container --> */}
@@ -195,7 +195,7 @@ class Homepage extends Component {
 					<div className="row">
 						<div className="col-lg-6 col-md-8 col-sm-12">
 							<h2>Find a Talent. <br /> Get the right talent to get that job done.</h2>
-							<Link href="/freelancers" className="button button-sliding-icon ripple-effect big margin-top-20">Get Started <i className="icon-material-outline-arrow-right-alt"></i></Link>
+							<Link to={"/freelancers"} className="button button-sliding-icon ripple-effect big margin-top-20">Get Started <i className="icon-material-outline-arrow-right-alt"></i></Link>
 						</div>
 					</div>
 
@@ -217,7 +217,7 @@ class Homepage extends Component {
 						{/* <!-- Section Headline --> */}
 						<div className="section-headline margin-top-0 margin-bottom-25">
 							<h3>Highest Rated Talents</h3>
-							<a href="pages/freelancers-grid-layout.html" className="headline-link">Browse All Talents</a>
+							<a href={""} className="headline-link">Browse All Talents</a>
 						</div>
 					</div>
 
@@ -237,12 +237,12 @@ class Homepage extends Component {
 										{/* <!-- Avatar --> */}
 										<div className="freelancer-avatar">
 											<div className="verified-badge"></div>
-											<a href="pages/single-freelancer-profile.html"><img src="images/user-avatar-big-01.jpg" alt="" /></a>
+											<a href={""}><img src="images/user-avatar-big-01.jpg" alt="" /></a>
 										</div>
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="pages/single-freelancer-profile.html">Emmanuel Omale <img className="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top" /></a></h4>
+											<h4><a href={""}>Emmanuel Omale <img className="flag" src="images/flags/gb.svg" alt="" title="United Kingdom" data-tippy-placement="top" /></a></h4>
 											<span>UI/UX Designer</span>
 										</div>
 
@@ -262,7 +262,7 @@ class Homepage extends Component {
 											<li>Job Success <strong>95%</strong></li>
 										</ul>
 									</div>
-									<a href="pages/single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
+									<a href={""} className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
 								</div>
 							</div>
 							{/* <!-- Freelancer / End --> */}
@@ -280,12 +280,12 @@ class Homepage extends Component {
 										{/* <!-- Avatar --> */}
 										<div className="freelancer-avatar">
 											<div className="verified-badge"></div>
-											<a href="pages/single-freelancer-profile.html"><img src="images/user-avatar-big-02.jpg" alt="" /></a>
+											<a href={""}><img src="images/user-avatar-big-02.jpg" alt="" /></a>
 										</div>
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Christian Ndu<img className="flag" src="images/flags/de.svg" alt="" title="Germany" data-tippy-placement="top" /></a></h4>
+											<h4><a href={"/#"}>Christian Ndu<img className="flag" src="images/flags/de.svg" alt="" title="Germany" data-tippy-placement="top" /></a></h4>
 											<span>Front-End Developer</span>
 										</div>
 
@@ -305,7 +305,7 @@ class Homepage extends Component {
 											<li>Job Success <strong>88%</strong></li>
 										</ul>
 									</div>
-									<a href="pages/single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
+									<a href={""} className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
 								</div>
 							</div>
 							{/* <!-- Freelancer / End --> */}
@@ -321,12 +321,12 @@ class Homepage extends Component {
 										
 										{/* <!-- Avatar --> */}
 										<div className="freelancer-avatar">
-											<a href="single-freelancer-profile.html"><img src="images/user-avatar-placeholder.png" alt="" /></a>
+											<a href={""}><img src="images/user-avatar-placeholder.png" alt="" /></a>
 										</div>
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Job Oaikhenah <img className="flag" src="images/flags/pl.svg" alt="" title="Poland" data-tippy-placement="top"/></a></h4>
+											<h4><a href={"/#"}>Job Oaikhenah <img className="flag" src="images/flags/pl.svg" alt="" title="Poland" data-tippy-placement="top"/></a></h4>
 											<span>Front-End Developer</span>
 										</div>
 
@@ -346,7 +346,7 @@ class Homepage extends Component {
 											<li>Job Success <strong>100%</strong></li>
 										</ul>
 									</div>
-									<a href="pages/single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
+									<a href={""} className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
 								</div>
 							</div>
 							{/* <!-- Freelancer / End --> */}
@@ -363,12 +363,12 @@ class Homepage extends Component {
 										{/* <!-- Avatar --> */}
 										<div className="freelancer-avatar">
 											<div className="verified-badge"></div>
-											<a href="pages/single-freelancer-profile.html"><img src="images/user-avatar-big-03.jpg" alt="" /></a>
+											<a href={""}><img src="images/user-avatar-big-03.jpg" alt="" /></a>
 										</div>
 
 										{/* <!-- Name --> */}
 										<div className="freelancer-name">
-											<h4><a href="#">Gain John <img className="flag" src="images/flags/au.svg" alt="" title="Australia" data-tippy-placement="top" /></a></h4>
+											<h4><a href={"/#"}>Gain John <img className="flag" src="images/flags/au.svg" alt="" title="Australia" data-tippy-placement="top" /></a></h4>
 											<span>Back-End Developer</span>
 										</div>
 
@@ -388,7 +388,7 @@ class Homepage extends Component {
 											<li>Job Success <strong>100%</strong></li>
 										</ul>
 									</div>
-									<a href="pages/single-freelancer-profile.html" className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
+									<a href={""} className="button button-sliding-icon ripple-effect">View Profile <i className="icon-material-outline-arrow-right-alt"></i></a>
 								</div>
 							</div>
 							{/* <!-- Freelancer / End --> */}
@@ -510,27 +510,27 @@ class Homepage extends Component {
 							<div className="logo-carousel">
 								
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-01.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-01.png" alt="" /></a>
 								</div>
 								
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-02.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-02.png" alt="" /></a>
 								</div>
 								
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-03.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-03.png" alt="" /></a>
 								</div>
 								
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-04.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-04.png" alt="" /></a>
 								</div>
 								
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-05.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-05.png" alt="" /></a>
 								</div>
 
 								<div className="carousel-item">
-									<a href="http://acmelogos.com/" target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-06.png" alt="" /></a>
+									<a href={""} target="_blank" title="http://acmelogos.com/"><img src="images/logo-carousel-06.png" alt="" /></a>
 								</div>
 
 							</div>
@@ -550,233 +550,4 @@ class Homepage extends Component {
 export default Homepage;
 
 
-
-{/* <div className="footer-middle-section">
-				<div className="container">
-					<div className="row"> */}
-
-						{/* <!-- Links --> */}
-						// <div className="col-xl-2 col-lg-2 col-md-3">
-						// 	<div className="footer-links">
-						// 		<h3>For Candidates</h3>
-						// 		<ul>
-						// 			<li><a href="#"><span>Browse Jobs</span></a></li>
-						// 			<li><a href="#"><span>Add Resume</span></a></li>
-						// 			<li><a href="#"><span>Job Alerts</span></a></li>
-						// 			<li><a href="#"><span>My Bookmarks</span></a></li>
-						// 		</ul>
-						// 	</div>
-						// </div>
-
-						{/* <!-- Links --> */}
-						// <div className="col-xl-2 col-lg-2 col-md-3">
-						// 	<div className="footer-links">
-						// 		<h3>For Employers</h3>
-						// 		<ul>
-						// 			<li><a href="#"><span>Browse Candidates</span></a></li>
-						// 			<li><a href="#"><span>Post a Job</span></a></li>
-						// 			<li><a href="#"><span>Post a Task</span></a></li>
-						// 		</ul>
-						// 	</div>
-						// </div>
-
-						{/* <!-- Links --> */}
-						// <div className="col-xl-2 col-lg-2 col-md-3">
-						// 	<div className="footer-links">
-						// 		<h3>Helpful Links</h3>
-						// 		<ul>
-						// 			<li><a href="#"><span>Contact</span></a></li>
-						// 			<li><a href="#"><span>Privacy Policy</span></a></li>
-						// 			<li><a href="#"><span>Terms of Use</span></a></li>
-						// 		</ul>
-						// 	</div>
-						// </div>
-
-						{/* <!-- Links --> */}
-						// <div className="col-xl-2 col-lg-2 col-md-3">
-						// 	<div className="footer-links">
-						// 		<h3>Account</h3>
-						// 		<ul>
-						// 			<li><a href="#"><span>Log In</span></a></li>
-						// 			<li><a href="#"><span>My Account</span></a></li>
-						// 		</ul>
-						// 	</div>
-						// </div>
-
-						{/* <!-- Newsletter --> */}
-			// 			<div className="col-xl-4 col-lg-4 col-md-12">
-			// 				<h3><i className="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
-			// 				<p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
-			// 				<form action="#" method="get" className="newsletter">
-			// 					<input type="text" name="fname" placeholder="Enter your email address" />
-			// 					<button type="submit"><i className="icon-feather-arrow-right"></i></button>
-			// 				</form>
-			// 			</div>
-			// 		</div>
-			// 	</div>
-			// </div>
-
-
-
-
-
-
-		{/* <div className="listings-container compact-list-layout margin-top-35">
-							
-			<!-- Job Listing -->
-			<a href="pages/single-job-page.html" className="job-listing with-apply-button">
-
-				<!-- Job Listing Details -->
-				<div className="job-listing-details">
-
-					<!-- Logo -->
-					<div className="job-listing-company-logo">
-						<img src="images/company-logo-01.png" alt="">
-					</div>
-
-					<!-- Details -->
-					<div className="job-listing-description">
-						<h3 className="job-listing-title">Bilingual Event Support Specialist</h3>
-
-						<!-- Job Listing Footer -->
-						<div className="job-listing-footer">
-							<ul>
-								<li><i className="icon-material-outline-business"></i> Hexagon <div className="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-								<li><i className="icon-material-outline-location-on"></i> San Francissco</li>
-								<li><i className="icon-material-outline-business-center"></i> Full Time</li>
-								<li><i className="icon-material-outline-access-time"></i> 2 days ago</li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Apply Button -->
-					<span className="list-apply-button ripple-effect">Apply Now</span>
-				</div>
-			</a>	 */}
-
-	{/* <!-- Job Listing -->
-	<a href="single-job-page.html" className="job-listing with-apply-button">
-
-		<!-- Job Listing Details -->
-		<div className="job-listing-details">
-
-			<!-- Logo -->
-			<div className="job-listing-company-logo">
-				<img src="images/company-logo-05.png" alt="">
-			</div>
-
-			<!-- Details -->
-			<div className="job-listing-description">
-				<h3 className="job-listing-title">Competition Law Officer</h3>
-
-				<!-- Job Listing Footer -->
-				<div className="job-listing-footer">
-					<ul>
-						<li><i className="icon-material-outline-business"></i> Laxo</li>
-						<li><i className="icon-material-outline-location-on"></i> San Francissco</li>
-						<li><i className="icon-material-outline-business-center"></i> Full Time</li>
-						<li><i className="icon-material-outline-access-time"></i> 2 days ago</li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- Apply Button -->
-			<span className="list-apply-button ripple-effect">Apply Now</span>
-		</div>
-	</a>
-	<!-- Job Listing -->
-	<a href="pages/single-job-page.html" className="job-listing with-apply-button">
-
-		<!-- Job Listing Details -->
-		<div className="job-listing-details">
-
-			<!-- Logo -->
-			<div className="job-listing-company-logo">
-				<img src="images/company-logo-02.png" alt="">
-			</div>
-
-			<!-- Details -->
-			<div className="job-listing-description">
-				<h3 className="job-listing-title">Barista and Cashier</h3>
-
-				<!-- Job Listing Footer -->
-				<div className="job-listing-footer">
-					<ul>
-						<li><i className="icon-material-outline-business"></i> Coffee</li>
-						<li><i className="icon-material-outline-location-on"></i> San Francissco</li>
-						<li><i className="icon-material-outline-business-center"></i> Full Time</li>
-						<li><i className="icon-material-outline-access-time"></i> 2 days ago</li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- Apply Button -->
-			<span className="list-apply-button ripple-effect">Apply Now</span>
-		</div>
-	</a>
-	
-
-	<!-- Job Listing -->
-	<a href="single-job-page.html" className="job-listing with-apply-button">
-
-		<!-- Job Listing Details -->
-		<div className="job-listing-details">
-
-			<!-- Logo -->
-			<div className="job-listing-company-logo">
-				<img src="images/company-logo-03.png" alt="">
-			</div>
-
-			<!-- Details -->
-			<div className="job-listing-description">
-				<h3 className="job-listing-title">Restaurant General Manager</h3>
-
-				<!-- Job Listing Footer -->
-				<div className="job-listing-footer">
-					<ul>
-						<li><i className="icon-material-outline-business"></i> King <div className="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-						<li><i className="icon-material-outline-location-on"></i> San Francissco</li>
-						<li><i className="icon-material-outline-business-center"></i> Full Time</li>
-						<li><i className="icon-material-outline-access-time"></i> 2 days ago</li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- Apply Button -->
-			<span className="list-apply-button ripple-effect">Apply Now</span>
-		</div>
-	</a>
-
-	<!-- Job Listing -->
-	<a href="pages/single-job-page.html" className="job-listing with-apply-button">
-
-		<!-- Job Listing Details -->
-		<div className="job-listing-details">
-
-			<!-- Logo -->
-			<div className="job-listing-company-logo">
-				<img src="images/company-logo-05.png" alt="">
-			</div>
-
-			<!-- Details -->
-			<div className="job-listing-description">
-				<h3 className="job-listing-title">International Marketing Coordinator</h3>
-
-				<!-- Job Listing Footer -->
-				<div className="job-listing-footer">
-					<ul>
-						<li><i className="icon-material-outline-business"></i> Skyist</li>
-						<li><i className="icon-material-outline-location-on"></i> San Francissco</li>
-						<li><i className="icon-material-outline-business-center"></i> Full Time</li>
-						<li><i className="icon-material-outline-access-time"></i> 2 days ago</li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- Apply Button -->
-			<span className="list-apply-button ripple-effect">Apply Now</span>
-		</div>
-	</a>
-
-</div> */}
 

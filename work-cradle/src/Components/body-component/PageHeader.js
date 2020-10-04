@@ -30,7 +30,7 @@ class PageHeader extends Component {
                     </ul>
                   </li>
 
-                    <li><a href="#">For Employers</a>
+                    <li><a href={"/#"}>For Employers</a>
                     <ul className="dropdown-nav">
                       <li><Link to="/freelancers">Find a Freelancer</Link></li>
                       <li><Link to="/postajob">Post a Job</Link></li>
@@ -49,7 +49,7 @@ class PageHeader extends Component {
               <div className="right-side">
 
                 <div className="header-widget">
-                  <a href="pages/pages-login.html" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></a> 
+                  <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
                 </div>
 
               {/* <!-- Mobile Navigation Button -->  */}

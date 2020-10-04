@@ -9,7 +9,7 @@ const UserNotif = () => {
         <div className="header-notifications">
           {/* <!-- Trigger --> */}
           <div className="header-notifications-trigger">
-            <a href="#"><i className="icon-feather-bell"></i><span>1</span></a>
+            <a href={"javascript:;"}><i className="icon-feather-bell"></i><span>1</span></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -27,7 +27,7 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <a href="dashboard-manage-candidates.html">
+                    <a href={""}>
                       <span className="notification-icon"><i className="icon-material-outline-group"></i></span>
                       <span className="notification-text">
                         <strong>Emmanuel Omale</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
@@ -45,7 +45,7 @@ const UserNotif = () => {
         {/* <!-- Messages --> */}
         <div className="header-notifications">
           <div className="header-notifications-trigger">
-            <a href="#"><i className="icon-feather-mail"></i><span>1</span></a>
+            <a href={"/#"}><i className="icon-feather-mail"></i><span>1</span></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -63,7 +63,7 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <a href="dashboard-messages.html">
+                    <a href={""}>
                       <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt=""/></span>
                       <div className="notification-text">
                         <strong>Emmanuel Omale</strong>
@@ -76,7 +76,7 @@ const UserNotif = () => {
               </div>
             </div>
 
-            <a href="" className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></a>
+            <a href={""} className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></a>
           </div>
         </div>
 
@@ -91,7 +91,7 @@ const UserNotif = () => {
         {/* <!-- Messages --> */}
         <div className="header-notifications user-menu">
           <div className="header-notifications-trigger">
-            <a href="#"><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""/></div></a>
+            <a href={"/#"}><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""/></div></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -120,7 +120,7 @@ const UserNotif = () => {
           <ul className="user-menu-small-nav">
             <li><Link to="/user/dashboard"><i className="icon-material-outline-dashboard"></i> Dashboard</Link></li>
             <li><Link to="/user/dashboard/settings"><i className="icon-material-outline-settings"></i> Settings</Link></li>
-            <li><a href=""><i className="icon-material-outline-power-settings-new"></i> Logout</a></li>
+            <li><a href={""}><i className="icon-material-outline-power-settings-new"></i> Logout</a></li>
           </ul>
 
           </div>

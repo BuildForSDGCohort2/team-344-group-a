@@ -11,7 +11,7 @@ const DashboardContent = () => {
 				{/* <!-- Breadcrumbs --> */}
 				<nav id="breadcrumbs" className="dark">
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href={"/#"}>Home</a></li>
 						<li>Dashboard</li>
 					</ul>
 				</nav>
@@ -94,8 +94,8 @@ const DashboardContent = () => {
 								<div className="note-footer">
 									<span className="note-priority high">High Priority</span>
 									<div className="note-buttons">
-										<a href="#" title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
-										<a href="#" title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
+										<a href={"/#"} title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
+										<a href={"/#"} title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
 									</div>
 								</div>
 							</div>
@@ -105,8 +105,8 @@ const DashboardContent = () => {
 								<div className="note-footer">
 									<span className="note-priority low">Low Priority</span>
 									<div className="note-buttons">
-										<a href="#" title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
-										<a href="#" title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
+										<a href={"/#"} title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
+										<a href={"/#"} title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
 									</div>
 								</div>
 							</div>
@@ -116,14 +116,14 @@ const DashboardContent = () => {
 								<div className="note-footer">
 									<span className="note-priority medium">Medium Priority</span>
 									<div className="note-buttons">
-										<a href="#" title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
-										<a href="#" title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
+										<a href={"/#"} title="Edit" data-tippy-placement="top"><i className="icon-feather-edit"></i></a>
+										<a href={"/#"} title="Remove" data-tippy-placement="top"><i className="icon-feather-trash-2"></i></a>
 									</div>
 								</div>
 							</div>
 						</div>
 							<div className="add-note-button">
-								<a href="#small-dialog" className="popup-with-zoom-anim button full-width button-sliding-icon">Add Note <i className="icon-material-outline-arrow-right-alt"></i></a>
+								<a href={"/#small-dialog"} className="popup-with-zoom-anim button full-width button-sliding-icon">Add Note <i className="icon-material-outline-arrow-right-alt"></i></a>
 							</div>
 					</div>
 					{/* <!-- Dashboard Box / End --> */}
@@ -148,51 +148,51 @@ const DashboardContent = () => {
 								<li>
 									<span className="notification-icon"><i className="icon-material-outline-group"></i></span>
 									<span className="notification-text">
-										<strong>Michael Shannah</strong> applied for a job <a href="#">Full Stack Software Engineer</a>
+										<strong>Michael Shannah</strong> applied for a job <a href={"/#"}>Full Stack Software Engineer</a>
 									</span>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="#" className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
+										<a href={"/#"} className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
 									</div>
 								</li>
 								<li>
 									<span className="notification-icon"><i className=" icon-material-outline-gavel"></i></span>
 									<span className="notification-text">
-										<strong>Gilber Allanis</strong> placed a bid on your <a href="#">iOS App Development</a> project
+										<strong>Gilber Allanis</strong> placed a bid on your <a href={"/#"}>iOS App Development</a> project
 									</span>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="#" className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
+										<a href={"/#"} className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
 									</div>
 								</li>
 								<li>
 									<span className="notification-icon"><i className="icon-material-outline-autorenew"></i></span>
 									<span className="notification-text">
-										Your job listing <a href="#">Full Stack Software Engineer</a> is expiring
+										Your job listing <a href={"/#"}>Full Stack Software Engineer</a> is expiring
 									</span>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="#" className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
+										<a href={"/#"} className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
 									</div>
 								</li>
 								<li>
 									<span className="notification-icon"><i className="icon-material-outline-group"></i></span>
 									<span className="notification-text">
-										<strong>Sindy Forrest</strong> applied for a job <a href="#">Full Stack Software Engineer</a>
+										<strong>Sindy Forrest</strong> applied for a job <a href={"/#"}>Full Stack Software Engineer</a>
 									</span>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="#" className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
+										<a href={"/#"} className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
 									</div>
 								</li>
 								<li>
 									<span className="notification-icon"><i className="icon-material-outline-rate-review"></i></span>
 									<span className="notification-text">
-										<strong>David Peterson</strong> left you a <span className="star-rating no-stars" data-rating="5.0"></span> rating after finishing <a href="#">Logo Design</a> task
+										<strong>David Peterson</strong> left you a <span className="star-rating no-stars" data-rating="5.0"></span> rating after finishing <a href={"/#"}>Logo Design</a> task
 									</span>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="#" className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
+										<a href={"/#"} className="button ripple-effect ico" title="Mark as read" data-tippy-placement="left"><i className="icon-feather-check-square"></i></a>
 									</div>
 								</li>
 							</ul>
@@ -219,7 +219,7 @@ const DashboardContent = () => {
 									</div>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="pages-checkout-page.html" className="button">Finish Payment</a>
+										<a href={""} className="button">Finish Payment</a>
 									</div>
 								</li>
 								<li>
@@ -233,7 +233,7 @@ const DashboardContent = () => {
 									</div>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="pages-invoice-template.html" className="button gray">View Invoice</a>
+										<a href={""} className="button gray">View Invoice</a>
 									</div>
 								</li>
 								<li>
@@ -247,7 +247,7 @@ const DashboardContent = () => {
 									</div>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="pages-invoice-template.html" className="button gray">View Invoice</a>
+										<a href={""} className="button gray">View Invoice</a>
 									</div>
 								</li>
 								<li>
@@ -261,7 +261,7 @@ const DashboardContent = () => {
 									</div>
 									{/* <!-- Buttons --> */}
 									<div className="buttons-to-right">
-										<a href="pages-invoice-template.html" className="button gray">View Invoice</a>
+										<a href={""} className="button gray">View Invoice</a>
 									</div>
 								</li>
 							</ul>

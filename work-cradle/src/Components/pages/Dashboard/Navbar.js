@@ -25,7 +25,7 @@ class Navbar extends Component {
             <div className="dashboard-nav-container">
 
               {/* Responsive Navigation Trigger */}
-              <a href="#" className='dashboard-responsive-nav-trigger'>
+              <a href={"/#"} className='dashboard-responsive-nav-trigger'>
                 <span className="hamburger hamburger--collapse" >
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
@@ -49,7 +49,7 @@ class Navbar extends Component {
                   </ul>
                   
                   <ul data-submenu-title="Organize and Manage">
-                    <li><a href="#"><i className='icon-material-outline-business-center'></i> Jobs</a>
+                    <li><a href={"/#"}><i className='icon-material-outline-business-center'></i> Jobs</a>
                       <ul>
                         <li className='' ref={this.item} onClick={this.handleClick}><NavLink activeClassName='selected' to="/user/dashboard-manage-jobs">Manage Jobs <span className='nav-tag'
                         >3</span></NavLink></li>

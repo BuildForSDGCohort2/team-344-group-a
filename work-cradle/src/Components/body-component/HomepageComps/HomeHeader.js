@@ -8,13 +8,13 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      token : ''
+      loginToken : ''
     }
   }
 
   componentDidMount() {
     setTimeout( ()=>{
-      this.setState({token : this.props.token});
+      this.setState({loginToken : this.props.loginToken});
       console.log(this.state) }, 1000) 
   }
 
@@ -38,20 +38,20 @@ class Header extends Component {
               {/* <!-- Main Navigation --> */}
               <nav id="navigation">
                 <ul id="responsive">
-                  <li><a href="#">Browse</a>
+                  <li><a href={"/#"}>Browse</a>
                     <ul className="dropdown-nav">
                       <li><Link to="/jobs">Browse Jobs</Link></li>
                       <li><Link to="/companies">Browse Companies</Link></li>
                     </ul>
                   </li>
 
-                  <li><a href="#">For Employers</a>
+                  <li><a href={"/#"}>For Employers</a>
                     <ul className="dropdown-nav">
                       <li><Link to="/freelancers">Find a Freelancer</Link></li>
                       <li><Link to="/jobs">Post a Job</Link></li>
                     </ul>
                   </li>
-                  <li style={{backgroundColor: '#53ec2c', padding: '.4rem', fontSize: '16px', marginRight: 'auto'}}><a href="#how_it_works">How it works?</a></li>
+                  <li style={{backgroundColor: '#53ec2c', padding: '.4rem', fontSize: '16px', marginRight: 'auto'}}><a href={"#how_it_works"}>How it works?</a></li>
                 </ul> 
               </nav> 
               <div className="clearfix"></div>
@@ -63,7 +63,7 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-              { this.state.token ?
+              { this.state.loginToken ?
                  <UserNotif />
                 : <div className="header-widget">
                     <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 

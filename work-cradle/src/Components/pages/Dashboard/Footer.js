@@ -10,22 +10,22 @@ const Footer = () => {
 				</div>
 				<ul className="footer-social-links">
 					<li>
-						<a href="#" title="Facebook" data-tippy-placement="top">
+						<a href={"/#"} title="Facebook" data-tippy-placement="top">
 							<i className="icon-brand-facebook-f"></i>
 						</a>
 					</li>
 					<li>
-						<a href="#" title="Twitter" data-tippy-placement="top">
+						<a href={"/#"} title="Twitter" data-tippy-placement="top">
 							<i className="icon-brand-twitter"></i>
 						</a>
 					</li>
 					<li>
-						<a href="#" title="Google Plus" data-tippy-placement="top">
+						<a href={"/#"} title="Google Plus" data-tippy-placement="top">
 							<i className="icon-brand-google-plus-g"></i>
 						</a>
 					</li>
 					<li>
-						<a href="#" title="LinkedIn" data-tippy-placement="top">
+						<a href={"/#"} title="LinkedIn" data-tippy-placement="top">
 							<i className="icon-brand-linkedin-in"></i>
 						</a>
 					</li>

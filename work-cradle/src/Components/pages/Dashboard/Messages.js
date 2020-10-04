@@ -9,8 +9,8 @@ const Messages = () => {
 				{/* <!-- Breadcrumbs --> */}
 				<nav id="breadcrumbs" className="dark">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Dashboard</a></li>
+						<li><a href={"/#"}>Home</a></li>
+						<li><a href={"/#"}>Dashboard</a></li>
 						<li>Messages</li>
 					</ul>
 				</nav>
@@ -31,7 +31,7 @@ const Messages = () => {
 
 							<ul>
 								<li>
-									<a href="#">
+									<a href={"/#"}>
 										<div className="message-avatar"><i className="status-icon status-online"></i><img src="images/user-avatar-small-03.jpg" alt="" /></div>
 
 										<div className="message-by">
@@ -45,7 +45,7 @@ const Messages = () => {
 								</li>
 
 								<li className="active-message">
-									<a href="#">
+									<a href={"/#"}>
 										<div className="message-avatar"><i className="status-icon status-offline"></i><img src="images/user-avatar-small-02.jpg" alt="" /></div>
 
 										<div className="message-by">
@@ -59,7 +59,7 @@ const Messages = () => {
 								</li>
 								
 								<li>
-									<a href="#">
+									<a href={"/#"}>
 										<div className="message-avatar"><i className="status-icon status-offline"></i><img src="images/user-avatar-placeholder.png" alt="" /></div>
 
 										<div className="message-by">
@@ -73,7 +73,7 @@ const Messages = () => {
 								</li>
 
 								<li>
-									<a href="#">
+									<a href={"/#"}>
 										<div className="message-avatar"><i className="status-icon status-online"></i><img src="images/user-avatar-placeholder.png" alt="" /></div>
 
 										<div className="message-by">
@@ -95,7 +95,7 @@ const Messages = () => {
 
 							<div className="messages-headline">
 								<h4>Sindy Forest</h4>
-								<a href="#" className="message-action"><i className="icon-feather-trash-2"></i> Delete Conversation</a>
+								<a href={"/#"} className="message-action"><i className="icon-feather-trash-2"></i> Delete Conversation</a>
 							</div>
 							
 							{/* <!-- Message Content Inner --> */}

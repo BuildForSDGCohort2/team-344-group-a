@@ -232,7 +232,7 @@ class JobsLayout extends Component {
 								
 								{jobs.map((job,index) => ( 
 										<div key ={index}className="listings-container compact-list-layout margin-top-35">
-											<a href="single-job-page.html" className="job-listing">	
+											<a href={""} className="job-listing">	
 												<div className="job-listing-details">										
 													<div className="job-listing-description">
 														<h3 className="job-listing-title">{job.title}</h3>
@@ -263,12 +263,12 @@ class JobsLayout extends Component {
 										<div className="pagination-container margin-top-60 margin-bottom-60">
 											<nav className="pagination">
 												<ul> 
-													<li className="pagination-arrow"><a href="#"><i className="icon-material-outline-keyboard-arrow-left"></i></a></li>
-													<li><a href="#">1</a></li>
-													<li><a href="#" className="current-page">2</a></li>
-													<li><a href="#">3</a></li>
-													<li><a href="#">4</a></li>
-													<li className="pagination-arrow"><a href="#"><i className="icon-material-outline-keyboard-arrow-right"></i></a></li>
+													<li className="pagination-arrow"><a href={"#"}><i className="icon-material-outline-keyboard-arrow-left"></i></a></li>
+													<li><a href={"/#"}>1</a></li>
+													<li><a href={"/#"} className="current-page">2</a></li>
+													<li><a href={"/#"}>3</a></li>
+													<li><a href={"/#"}>4</a></li>
+													<li className="pagination-arrow"><a href={"#"}><i className="icon-material-outline-keyboard-arrow-right"></i></a></li>
 												</ul>
 											</nav>
 										</div>

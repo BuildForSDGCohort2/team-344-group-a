@@ -1,9 +1,9 @@
 [build]
   command = "npm run build"
-  publish = "work-cradle/build"
-  base = "work-cradle"
+  publish = "/work-cradle/build"
+  base = "/work-cradle"
  
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = "200" 
+  status = 200 

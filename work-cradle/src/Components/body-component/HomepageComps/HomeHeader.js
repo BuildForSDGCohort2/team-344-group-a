@@ -14,8 +14,8 @@ class Header extends Component {
 
   componentDidMount() {
     setTimeout( ()=>{
-      this.setState({loginToken : this.props.loginToken});
-      console.log(this.state) }, 1000) 
+      this.setState({loginToken : this.props.token});
+      console.log(this.props.token) }, 2000) 
   }
 
   render() {
@@ -63,7 +63,7 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-              { this.state.loginToken ?
+              { this.props.token ?
                  <UserNotif />
                 : <div className="header-widget">
                     <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 

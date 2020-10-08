@@ -9,14 +9,19 @@ class Homepage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			token: '',
+			token: ''
 		} 
 	}
 
 	componentDidMount() {
 		console.log('userData', this.props.location.state);
 		this.setState({...this.props.location.state});
+
+		let registeredALert = () =>  (window.sessionStorage.userData && this.state.registered) ?	alert('Account Registered Successfully') 	: null  
+
+		registeredALert()
 	}
+
 
 	render () {
 	 return (

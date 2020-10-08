@@ -92,45 +92,55 @@ class SignUp extends Component {
     } else {this.setState({passConfirmed: false})}
   }
 
-  accountSuccessfulPopup() {
-    return ( 
-      <div className={`signupPopup ${this.state.popup ? 'show' : ''}`}>
-        <div className="content">
-          <FontAwesomeIcon className="icon" icon={faCheckCircle}/>
-          <p>Registration Successful!</p>
-        </div>       
-      </div>
-    ) 
-  }
+  // accountSuccessfulPopup() {
+  //   return ( 
+  //     <div className={`signupPopup ${this.state.popup ? 'show' : ''}`}>
+  //       <div className="content">
+  //         <FontAwesomeIcon className="icon" icon={faCheckCircle}/>
+  //         <p>Registration Successful!</p>
+  //       </div>       
+  //     </div>
+  //   ) 
+  // }
 
-  redirect = () => {
-    const { token } = this.state;
-    
-    async function red() {
-      let promise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(
-          <Redirect 
-            to={{
-              pathname: '/',
-              state: { token: token } 
-            }}
-          />), 2000) 
-      });
-      let result = await promise; 
-      console.log(result);
-      return result;
-    }; 
-    red();
-  }
+  // red = () => <Redirect to={{ pathname: '/', state: {token: this.state.token} }}/> 
+
+  // redirect() {
+  //   const { token } = this.state;
+  //   // return (
+  //   //   this.accountSuccessfulPopup()
+  //   // )
+
+  //   async function red() {
+  //     let promise = new Promise((resolve, reject) => {
+  //       setTimeout(() => resolve(
+  //         <Redirect 
+  //           to={{
+  //             pathname: '/',
+  //             state: { token: token } 
+  //           }}
+  //         />), 2000) 
+  //     });
+  //     let result = await promise; 
+  //     console.log(result);
+  //     return result;
+  //   }; 
+  //   red();
+
+  // }
 
   render() {
     const { incorrectPass, passConfirmed, token } = this.state;
 
-    if(!token) {
+    if(token) {
       return (
         <>
-          { this.redirect() }
-          { this.accountSuccessfulPopup() }
+          <Redirect 
+            to={{
+              pathname: '/',
+              state: { token: token, registered: true } 
+            }}
+          />
         </>
       ) 
     }
@@ -229,7 +239,8 @@ class SignUp extends Component {
                   </form>
                   
                   {/* <!-- Button --> */}
-                  <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.submitForm}>{this.state.registering ? 'Registering...' : 'Register'}<i className="icon-material-outline-arrow-right-alt"></i></button>
+                  <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.submitForm}>{this.state.registering ? 'Registering...' : 'Register'} 
+                  <i className={this.state.registering ? '' : "icon-material-outline-arrow-right-alt"}></i></button>
                   
                 </div>
 

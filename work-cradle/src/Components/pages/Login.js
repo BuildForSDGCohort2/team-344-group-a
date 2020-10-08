@@ -13,6 +13,7 @@ class Login extends Component {
       invalidLoginDetails: false,
       loggedIn: false,
       userToken: '',
+      isLoggingIn: false
     }
 
     this.login = this.login.bind(this);
@@ -21,6 +22,7 @@ class Login extends Component {
 
   login(e) {
     e.preventDefault();
+    this.setState({isLoggingIn: true})
     const loginDetails = {
       email: this.state.emailAddress,
       password: this.state.password
@@ -38,6 +40,7 @@ class Login extends Component {
       });
     } else {
         this.setState({
+          isLoggingIn: false,
           invalidLoginDetails: true,
         })
       }
@@ -112,7 +115,7 @@ class Login extends Component {
                   </form>
                   
                   {/* <!-- Button --> */}
-                  <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.login}>Log In <i className="icon-material-outline-arrow-right-alt"></i></button>
+                  <button className="button full-width button-sliding-icon ripple-effect margin-top-10" type="submit" form="login-form" onClick={this.login}>{this.state.isLoggingIn ? 'Logging in' : 'Log In'}<i className={this.state.isLoggingIn ? '' : "icon-material-outline-arrow-right-alt"}></i></button>
                   
                 </div>
 

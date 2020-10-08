@@ -48,7 +48,7 @@ class PageHeader extends Component {
 
               {/* <!-- Right Side Content / End --> */}
               <div className="right-side">
-                { window.sessionStorage ? 
+                { window.sessionStorage.length ? 
                   <UserNotif /> 
                   : <div className="header-widget">
                     <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 

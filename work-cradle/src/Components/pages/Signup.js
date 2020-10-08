@@ -1,8 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+
 import PostData from '../Services /PostData';
-import Footer from '../body-component/Footer';
+import Footer from '../body-components/Footer';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 class SignUp extends Component {
 
@@ -21,7 +25,6 @@ class SignUp extends Component {
       employer: false,
       registering: false,
       token: '',
-      registered:  false
     } 
 
     this.NameHandler = this.NameHandler.bind(this);
@@ -30,6 +33,7 @@ class SignUp extends Component {
     this.repeatPasswordHandler = this.repeatPasswordHandler.bind(this);
     this.register = this.register.bind(this);
     this.submitForm = this.submitForm.bind(this);
+    this.redirect = this.redirect.bind(this);
   }
 
   NameHandler(e) {
@@ -74,10 +78,8 @@ class SignUp extends Component {
       let responseJSON = result;
       if(responseJSON.access_token) {
         sessionStorage.setItem('userData', responseJSON.access_token);
-        this.setState({
-          token: responseJSON.access_token,
-          resigistered : true
-        }); 
+        this.setState({token: responseJSON.access_token,}); 
+        console.log(this.state);
       }
     }) 
   }  
@@ -90,17 +92,47 @@ class SignUp extends Component {
     } else {this.setState({passConfirmed: false})}
   }
 
+  accountSuccessfulPopup() {
+    return ( 
+      <div className={`signupPopup ${this.state.popup ? 'show' : ''}`}>
+        <div className="content">
+          <FontAwesomeIcon className="icon" icon={faCheckCircle}/>
+          <p>Registration Successful!</p>
+        </div>       
+      </div>
+    ) 
+  }
+
+  redirect = () => {
+    const { token } = this.state;
+    
+    async function red() {
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve(
+          <Redirect 
+            to={{
+              pathname: '/',
+              state: { token: token } 
+            }}
+          />), 2000) 
+      });
+      let result = await promise; 
+      console.log(result);
+      return result;
+    }; 
+    red();
+  }
+
   render() {
-    const { incorrectPass, passConfirmed, token, registered } = this.state;
-    if(registered) {
-      return <Redirect 
-      to={{
-        pathname: '/',
-        state: {
-          registered : registered, 
-          token: token
-        } 
-      }}/> 
+    const { incorrectPass, passConfirmed, token } = this.state;
+
+    if(!token) {
+      return (
+        <>
+          { this.redirect() }
+          { this.accountSuccessfulPopup() }
+        </>
+      ) 
     }
     else { 
       return(

@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import PostData from '../Services /PostData';
-import Footer from '../body-component/Footer';
+import Footer from '../body-components/Footer';
 
 class Login extends Component {
   constructor(){
@@ -12,7 +12,7 @@ class Login extends Component {
       password: '',
       invalidLoginDetails: false,
       loggedIn: false,
-      userToken: ''
+      userToken: '',
     }
 
     this.login = this.login.bind(this);
@@ -35,11 +35,10 @@ class Login extends Component {
             loggedIn:true, userToken: responseJSON.access_token
           })
         }
-      }) 
-    }
-      else {
+      });
+    } else {
         this.setState({
-          invalidLoginDetails: true
+          invalidLoginDetails: true,
         })
       }
   }
@@ -75,7 +74,7 @@ class Login extends Component {
                   <nav id="breadcrumbs" className="dark">
                     <ul>
                       <li><Link to="/">Home</Link></li>
-                      <li>Log In</li>
+                      <li>Log in</li>
                     </ul>
                   </nav>
 

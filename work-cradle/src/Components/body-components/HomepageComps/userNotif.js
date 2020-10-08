@@ -27,12 +27,12 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <a href={""}>
+                    <Link to={"/user/dashboard/notifications"}>
                       <span className="notification-icon"><i className="icon-material-outline-group"></i></span>
                       <span className="notification-text">
                         <strong>Emmanuel Omale</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -41,7 +41,7 @@ const UserNotif = () => {
           </div>
 
         </div>
-        
+
         {/* <!-- Messages --> */}
         <div className="header-notifications">
           <div className="header-notifications-trigger">
@@ -63,20 +63,20 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <a href={""}>
-                      <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt=""/></span>
+                    <Link to={"/user/dashboard/messages"}>
+                      <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt="" /></span>
                       <div className="notification-text">
                         <strong>Emmanuel Omale</strong>
                         <p className="notification-msg-text">Thanks for reaching out. I'm quite busy right now on many...</p>
                         <span className="color">4 hours ago</span>
                       </div>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <a href={""} className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></a>
+            <Link to={"/user/dashboard/messages"} className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></Link>
           </div>
         </div>
 
@@ -91,7 +91,7 @@ const UserNotif = () => {
         {/* <!-- Messages --> */}
         <div className="header-notifications user-menu">
           <div className="header-notifications-trigger">
-            <a href={"/#"}><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""/></div></a>
+            <a href={"/#"}><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt="" /></div></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -102,26 +102,26 @@ const UserNotif = () => {
 
               {/* <!-- User Name / Avatar --> */}
               <div className="user-details">
-                <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""/></div>
+                <div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt="" /></div>
                 <div className="user-name">
                   Emmanuel Omale <span>Full Stack</span>
                 </div>
               </div>
-              
+
               {/* <!-- User Status Switcher --> */}
               <div className="status-switch" id="snackbar-user-status">
                 <label className="user-online current-status">Online</label>
                 <label className="user-invisible">Invisible</label>
                 {/* <!-- Status Indicator --> */}
                 <span className="status-indicator" aria-hidden="true"></span>
-              </div>	
-          </div>
-          
-          <ul className="user-menu-small-nav">
-            <li><Link to="/user/dashboard"><i className="icon-material-outline-dashboard"></i> Dashboard</Link></li>
-            <li><Link to="/user/dashboard/settings"><i className="icon-material-outline-settings"></i> Settings</Link></li>
-            <li><a href={""}><i className="icon-material-outline-power-settings-new"></i> Logout</a></li>
-          </ul>
+              </div>
+            </div>
+
+            <ul className="user-menu-small-nav">
+              <li><Link to="/user/dashboard"><i className="icon-material-outline-dashboard"></i> Dashboard</Link></li>
+              <li><Link to="/user/dashboard/settings"><i className="icon-material-outline-settings"></i> Settings</Link></li>
+              <li><a href={""}><i className="icon-material-outline-power-settings-new"></i> Logout</a></li>
+            </ul>
 
           </div>
         </div>

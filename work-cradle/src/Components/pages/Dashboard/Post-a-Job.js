@@ -125,7 +125,7 @@ class PostAJob extends Component {
 											<textarea cols="30" rows="5" className="with-border"></textarea>
 											<div className="uploadButton margin-top-30">
 												<input className="uploadButton-input" type="file" accept="image/*, application/pdf" id="upload" multiple/>
-												<label className="uploadButton-button ripple-effect" for="upload">Upload Files</label>
+												<label className="uploadButton-button ripple-effect" htmlFor="upload">Upload Files</label>
 												<span className="uploadButton-file-name">Images or documents that might be helpful in describing your job</span>
 											</div>
 										</div>

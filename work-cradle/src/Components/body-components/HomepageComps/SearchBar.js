@@ -24,14 +24,14 @@ class SearchBar extends Component {
 
           {/* <!-- Search Field --> */}
           <div className="intro-search-field">
-            <label for ="intro-keywords" className="field-title ripple-effect">Looking for a Talent?</label>
-            <i class="fas fa-search"></i>
+            <label htmlFor ="intro-keywords" className="field-title ripple-effect">Looking for a Talent?</label>
+            <i className="fas fa-search"></i>
             <input id="intro-keywords" type="text" placeholder="Enter Company Name or Skill Title" onChange={this.handleChange.bind(this)}/>
           </div>
 
           {/* <!-- Button --> */}
           <div className="intro-search-button">
-            <button className="button ripple-effect" onclick>Search</button>
+            <button className="button ripple-effect">Search</button>
           </div>
         </div> 
       </>

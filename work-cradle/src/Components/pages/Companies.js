@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import Footer from '../body-component/Footer';
+import Footer from '../body-components/Footer';
 
 class Companies extends Component {
   render() {

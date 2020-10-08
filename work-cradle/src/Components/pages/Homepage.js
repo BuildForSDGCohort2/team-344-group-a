@@ -1,9 +1,8 @@
-import { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
 
-import Header from '../body-component/HomepageComps/HomeHeader';
-import Footer from '../body-component/Footer';
-import SearchBar from '../body-component/HomepageComps/SearchBar';
+import Header from '../body-components/HomepageComps/HomeHeader';
+import Footer from '../body-components/Footer';
+import SearchBar from '../body-components/HomepageComps/SearchBar';
 import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
@@ -54,7 +53,7 @@ class Homepage extends Component {
 				
 				{/* <!-- Video Container --> */}
 				<div className="video-container" data-background-image="images/home-video-background-poster.jpg">
-					<video loop autoplay muted>
+					<video loop autoPlay muted>
 						<source src="images/home-video-background.mp4" type="video/mp4" />
 					</video>
 				</div>

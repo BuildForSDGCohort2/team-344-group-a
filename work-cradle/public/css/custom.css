@@ -1,0 +1,41 @@
+.signupPopup {
+  background: linear-gradient(#ffffff, #ffffff #727272);
+  font: inherit;
+  width: 70%;
+  max-width: 500px;
+  position: fixed;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  border-radius: 3px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+  padding: 1.5em 0 1.5em 0;
+  animation: popup 1s;
+}
+@keyframes popup {
+  0%{
+    width: 0%;
+    opacity: 0; 
+  }
+  40%{
+    width: 10%;
+    opacity: 0; 
+  }
+  100%{
+    width: 100%;
+    opacity: 1;  
+  }
+}
+
+.content {
+  text-align: center;
+}
+
+.icon{
+  font-size: 100px;
+  color: #53ec2c;
+  margin: 10px 0 20px 0; 
+}
+.content p {
+  font-size: 25px;
+}

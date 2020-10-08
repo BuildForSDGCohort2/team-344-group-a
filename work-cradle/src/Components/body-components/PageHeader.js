@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UserNotif from './HomepageComps/userNotif';
 
 class PageHeader extends Component {
   render() {
@@ -47,11 +48,12 @@ class PageHeader extends Component {
 
               {/* <!-- Right Side Content / End --> */}
               <div className="right-side">
-
-                <div className="header-widget">
-                  <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
-                </div>
-
+                { window.sessionStorage ? 
+                  <UserNotif /> 
+                  : <div className="header-widget">
+                    <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
+                    </div>
+                }
               {/* <!-- Mobile Navigation Button -->  */}
                 <span className="mmenu-trigger">
                   <button className="hamburger hamburger--collapse" type="button">

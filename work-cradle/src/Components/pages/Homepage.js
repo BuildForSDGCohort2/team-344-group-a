@@ -82,7 +82,7 @@ class Homepage extends Component {
 
 						<div className="col-xl-3 col-md-6">
 							{/* <!-- Photo Box --> */}
-							<Link to="/jobs/web_software_dev" className="photo-box small" data-background-image="images/job-category-01.jpg">
+							<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-01.jpg">
 							<div className="photo-box-content">
 								<h3>Web / Software Dev</h3>
 								<span></span>
@@ -92,7 +92,7 @@ class Homepage extends Component {
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/data_science_analalytics" className="photo-box small" data-background-image="images/job-category-02.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-02.jpg">
 							<div className="photo-box-content">
 								<h3>Data Science / Analitycs</h3>
 								<span></span>
@@ -102,7 +102,7 @@ class Homepage extends Component {
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/javascript" className="photo-box small" data-background-image="images/job-category-03.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-03.jpg">
 							<div className="photo-box-content">
 								<h3>Javascript</h3>
 								<span></span>
@@ -112,7 +112,7 @@ class Homepage extends Component {
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/golang" className="photo-box small" data-background-image="images/job-category-04.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-04.jpg">
 							<div className="photo-box-content">
 								<h3>Golang</h3>
 								<span></span>
@@ -122,7 +122,7 @@ class Homepage extends Component {
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/python" className="photo-box small" data-background-image="images/job-category-05.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-05.jpg">
 							<div className="photo-box-content">
 								<h3>Python</h3>
 								<span></span>
@@ -132,7 +132,7 @@ class Homepage extends Component {
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/graphics_&_design" className="photo-box small" data-background-image="images/job-category-06.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-06.jpg">
 							<div className="photo-box-content">
 								<h3>Graphics & Design</h3>
 								<span></span>
@@ -142,7 +142,7 @@ class Homepage extends Component {
 					
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/digital_marketing" className="photo-box small" data-background-image="images/job-category-07.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-07.jpg">
 							<div className="photo-box-content">
 								<h3>Digital Marketing</h3>
 								<span></span>
@@ -152,7 +152,7 @@ class Homepage extends Component {
 
 					<div className="col-xl-3 col-md-6">
 						{/* <!-- Photo Box --> */}
-						<Link to="/jobs/education_training" className="photo-box small" data-background-image="images/job-category-08.jpg">
+						<Link to={"/jobs"} className="photo-box small" data-background-image="images/job-category-08.jpg">
 							<div className="photo-box-content">
 								<h3>Education & Training</h3>
 								<span></span>
@@ -219,10 +219,10 @@ class Homepage extends Component {
 
 					<div className="col-xl-12">
 						{/* <!-- Section Headline --> */}
-						<div className="section-headline margin-top-0 margin-bottom-25">
+						{/* <div className="section-headline margin-top-0 margin-bottom-25">
 							<h3>Highest Rated Talents</h3>
-							<a href={""} className="headline-link">Browse All Talents</a>
-						</div>
+							<Link to={"/freelancers"} className="headline-link">Browse All Talents</Link>
+						</div> */}
 					</div>
 
 					<div className="col-xl-12">

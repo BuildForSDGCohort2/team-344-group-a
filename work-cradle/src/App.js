@@ -33,8 +33,8 @@ class App extends React.Component{
                 <Route exact path='/login' component={Login}/>
                 <Route exact path='/signup' component={SignUp}/>  
                 <Route exact path='/user/dashboard' component={Dashboard}/>
-                <Route exact path='./user/dashboard/messages' component={Messages}/>
-              </div>
+                <Route exact path='/user/dashboard/messages' component={Messages}/>
+              </div> 
             </Switch>
           </Base>
         </Suspense>

@@ -10,7 +10,9 @@ class Header extends Component {
     this.state = {
       loginToken : ''
     }
+    
   }
+
 
   render() {
     return(

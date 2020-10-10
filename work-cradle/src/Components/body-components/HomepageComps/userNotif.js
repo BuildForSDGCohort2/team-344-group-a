@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const UserNotif = () => {
+class UserNotif extends Component {
+
+
+render() {
   return (
     <>
       <div className="header-widget hide-on-mobile">
@@ -9,7 +12,7 @@ const UserNotif = () => {
         <div className="header-notifications">
           {/* <!-- Trigger --> */}
           <div className="header-notifications-trigger">
-            <a href={"/#"}><i className="icon-feather-bell"></i><span>1</span></a>
+            <a onClick={e=> e.target.parentElement.parentElement.parentElement.classList.toggle('active')} href={"#"}><i className="icon-feather-bell"></i><span>1</span></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -27,7 +30,7 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <Link to={"/user/dashboard/notifications"}>
+                    <Link to={"/user/dashboard"}>
                       <span className="notification-icon"><i className="icon-material-outline-group"></i></span>
                       <span className="notification-text">
                         <strong>Emmanuel Omale</strong> applied for a job <span className="color">Full Stack Software Engineer</span>
@@ -45,7 +48,7 @@ const UserNotif = () => {
         {/* <!-- Messages --> */}
         <div className="header-notifications">
           <div className="header-notifications-trigger">
-            <a href={"/#"}><i className="icon-feather-mail"></i><span>1</span></a>
+            <a onClick={e=> e.target.parentElement.parentElement.parentElement.classList.toggle('active')} href={"/#"}><i className="icon-feather-mail"></i><span>1</span></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -63,7 +66,7 @@ const UserNotif = () => {
                 <ul>
                   {/* <!-- Notification --> */}
                   <li className="notifications-not-read">
-                    <Link to={"/user/dashboard/messages"}>
+                    <Link to={"/user/dashboard"}>
                       <span className="notification-avatar status-online"><img src="images/user-avatar-small-03.jpg" alt="" /></span>
                       <div className="notification-text">
                         <strong>Emmanuel Omale</strong>
@@ -76,7 +79,7 @@ const UserNotif = () => {
               </div>
             </div>
 
-            <Link to={"/user/dashboard/messages"} className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></Link>
+            <Link to={"/user/dashboard"} className="header-notifications-button ripple-effect button-sliding-icon">View All Messages<i className="icon-material-outline-arrow-right-alt"></i></Link>
           </div>
         </div>
 
@@ -91,7 +94,7 @@ const UserNotif = () => {
         {/* <!-- Messages --> */}
         <div className="header-notifications user-menu">
           <div className="header-notifications-trigger">
-            <a href={"/#"}><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt="" /></div></a>
+            <a onClick={e=> e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle('active')} href={"#"}><div className="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt="" /></div></a>
           </div>
 
           {/* <!-- Dropdown --> */}
@@ -118,8 +121,8 @@ const UserNotif = () => {
             </div>
 
             <ul className="user-menu-small-nav">
-              <li><Link to="/user/dashboard"><i className="icon-material-outline-dashboard"></i> Dashboard</Link></li>
-              <li><Link to="/user/dashboard/settings"><i className="icon-material-outline-settings"></i> Settings</Link></li>
+              <li><Link to={"/user/dashboard"}><i className="icon-material-outline-dashboard"></i> Dashboard</Link></li>
+              <li><Link to={"/user/dashboard/settings"}><i className="icon-material-outline-settings"></i> Settings</Link></li>
               <li><a href={""}><i className="icon-material-outline-power-settings-new"></i> Logout</a></li>
             </ul>
 
@@ -129,6 +132,7 @@ const UserNotif = () => {
       </div>
     </>
   )
+}
 }
 
 export default UserNotif;

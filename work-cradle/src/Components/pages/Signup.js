@@ -5,9 +5,6 @@ import { Link, Redirect } from 'react-router-dom';
 import PostData from '../Services /PostData';
 import Footer from '../body-components/Footer';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
-
 class SignUp extends Component {
 
   constructor() {

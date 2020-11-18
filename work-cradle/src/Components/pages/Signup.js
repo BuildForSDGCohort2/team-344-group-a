@@ -89,43 +89,6 @@ class SignUp extends Component {
     } else {this.setState({passConfirmed: false})}
   }
 
-  // accountSuccessfulPopup() {
-  //   return ( 
-  //     <div className={`signupPopup ${this.state.popup ? 'show' : ''}`}>
-  //       <div className="content">
-  //         <FontAwesomeIcon className="icon" icon={faCheckCircle}/>
-  //         <p>Registration Successful!</p>
-  //       </div>       
-  //     </div>
-  //   ) 
-  // }
-
-  // red = () => <Redirect to={{ pathname: '/', state: {token: this.state.token} }}/> 
-
-  // redirect() {
-  //   const { token } = this.state;
-  //   // return (
-  //   //   this.accountSuccessfulPopup()
-  //   // )
-
-  //   async function red() {
-  //     let promise = new Promise((resolve, reject) => {
-  //       setTimeout(() => resolve(
-  //         <Redirect 
-  //           to={{
-  //             pathname: '/',
-  //             state: { token: token } 
-  //           }}
-  //         />), 2000) 
-  //     });
-  //     let result = await promise; 
-  //     console.log(result);
-  //     return result;
-  //   }; 
-  //   red();
-
-  // }
-
   render() {
     const { incorrectPass, passConfirmed, token } = this.state;
 

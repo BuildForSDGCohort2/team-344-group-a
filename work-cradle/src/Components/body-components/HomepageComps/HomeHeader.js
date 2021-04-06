@@ -1,8 +1,19 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UserNotif from './userNotif';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loginToken : ''
+    }
+    
+  }
+
+
   render() {
     return(
       <>
@@ -23,20 +34,20 @@ class Header extends Component {
               {/* <!-- Main Navigation --> */}
               <nav id="navigation">
                 <ul id="responsive">
-                  <li><a href="#">Browse</a>
+                  <li><a href={"/#"}>Browse</a>
                     <ul className="dropdown-nav">
                       <li><Link to="/jobs">Browse Jobs</Link></li>
                       <li><Link to="/companies">Browse Companies</Link></li>
                     </ul>
                   </li>
 
-                  <li><a href="#">For Employers</a>
+                  <li><a href={"/#"}>For Employers</a>
                     <ul className="dropdown-nav">
-                      <li><Link to="/frelancer">Find a Freelancer</Link></li>
+                      <li><Link to="/freelancers">Find a Freelancer</Link></li>
                       <li><Link to="/jobs">Post a Job</Link></li>
                     </ul>
                   </li>
-                  <li style={{backgroundColor: '#53ec2c', padding: '.4rem', fontSize: '16px', marginRight: 'auto'}}><a href="#how_it_works">How it works?</a></li>
+                  <li style={{backgroundColor: '#53ec2c', padding: '.4rem', fontSize: '16px', marginRight: 'auto'}}><a href={"#how_it_works"}>How it works?</a></li>
                 </ul> 
               </nav> 
               <div className="clearfix"></div>
@@ -48,11 +59,12 @@ class Header extends Component {
 
             {/* <!-- Right Side Content / End --> */}
             <div className="right-side">
-
-              <div className="header-widget">
-                <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
-              </div>
-
+              { window.sessionStorage.length ?
+                 <UserNotif />
+                : <div className="header-widget">
+                    <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
+                  </div>
+              }
               {/* <!-- Mobile Navigation Button --> */}
               <span className="mmenu-trigger">
                 <button className="hamburger hamburger--collapse" type="button">

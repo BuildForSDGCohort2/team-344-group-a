@@ -1,6 +1,6 @@
 
 const PostData = (type, userData) => {
-  let BaseUrl = 'http://workcradle.herokuapp.com/api/'; 
+  let BaseUrl = 'https://workcradle.herokuapp.com/api/'; 
   console.log(BaseUrl+type);
   return new Promise((resolve, reject) => {
     fetch(BaseUrl+type, {

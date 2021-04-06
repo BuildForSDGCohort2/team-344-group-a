@@ -1,8 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import UserNotif from './HomepageComps/userNotif';
 
 class PageHeader extends Component {
+
+
+
   render() {
     return(
       <>
@@ -30,7 +34,7 @@ class PageHeader extends Component {
                     </ul>
                   </li>
 
-                    <li><a href="#">For Employers</a>
+                    <li><a href={"/#"}>For Employers</a>
                     <ul className="dropdown-nav">
                       <li><Link to="/freelancers">Find a Freelancer</Link></li>
                       <li><Link to="/postajob">Post a Job</Link></li>
@@ -47,11 +51,12 @@ class PageHeader extends Component {
 
               {/* <!-- Right Side Content / End --> */}
               <div className="right-side">
-
-                <div className="header-widget">
-                  <a href="pages/pages-login.html" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></a> 
-                </div>
-
+                { window.sessionStorage.length ? 
+                  <UserNotif /> 
+                  : <div className="header-widget">
+                    <Link to="/login" className="log-in-button"><i className="icon-feather-log-in"></i><span>Log In / Register</span></Link> 
+                    </div>
+                }
               {/* <!-- Mobile Navigation Button -->  */}
                 <span className="mmenu-trigger">
                   <button className="hamburger hamburger--collapse" type="button">
